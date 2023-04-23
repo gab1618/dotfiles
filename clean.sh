@@ -1,0 +1,9 @@
+rm -rf ./alacritty.yml
+rm -rf ./i3config
+rm -rf ./nvim
+rm -rf ./picom.conf
+rm -rf ./polybarconfig
+rm -rf ./rofi
+rm -rf ./.tmux.conf
+rm -rf ./.tmux.conf.local
+rm -rf ./.zshrc
