@@ -1,9 +1,9 @@
-cp ./i3config ~/.config/i3/config 
-cp ./.tmux.conf ~/.tmux.conf 
-cp ./.tmux.conf ~/.tmux.conf.local
-cp ./picom.conf ~/.config/picom/picom.conf 
-cp ./polybarconfig ~/.config/polybar/config 
-cp -r ./nvim ~/.config/
-cp ./alacritty.yml ~/.config/alacritty/alacritty.yml 
-cp -r ./rofi ~/.config/rofi 
-cp ./.zshrc ~/.zshrc
+cp ./files/i3config ~/.config/i3/config 
+cp ./files/.tmux.conf ~/.tmux.conf 
+cp ./files/.tmux.conf.local ~/.tmux.conf.local
+cp ./files/picom.conf ~/.config/picom/picom.conf 
+cp ./files/polybarconfig ~/.config/polybar/config 
+cp -r ./files/nvim ~/.config/
+cp ./files/alacritty.yml ~/.config/alacritty/alacritty.yml 
+cp -r ./files/rofi ~/.config
+cp ./files/.zshrc ~/.zshrc
