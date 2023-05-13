@@ -5,15 +5,17 @@ floating_modifier $mod
 
 bindsym $mod+d exec rofi -show drun
 
-bindsym $mod+p exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher.sh
+bindsym $mod+p exec --no-startup-id ~/.config/rofi/launchers/type-3/launcher.sh
 
 exec_always --no-startup-id numlockx on
 
 exec --no-startup-id dex --autostart --environment i3
 
-exec --no-startup-id polybar example
+exec polybar main
+
 #bar {
-#        status_command i3status
+  #mode hide
+  #status_command i3status
 #}
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
@@ -38,6 +40,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # start a terminal
 bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+p exec gnome-screenshot -i
 
 # kill focused window
 bindsym $mod+Shift+q kill

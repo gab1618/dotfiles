@@ -9,15 +9,16 @@ primary = #542ce6
 secondary = #e60053
 alert = #bd2c40
 
-[bar/example]
+[bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
+autohide = true
+autohide-scroll = false
 height = 32
 ;offset-x = 1%
 ;offset-y = 1%
 ;radius = 4.0
 fixed-center = false
-bottom = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -34,15 +35,15 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
+font-0 = siji:pixelsize=12;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-2 = fixed:pixelsize=10;1
 
 modules-left = bspwm i3
 # modules-center = mpd
 modules-right = xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery date powermenu
 
-tray-position = right
+tray-position = none
 tray-padding = 2
 tray-background = #0063ff
 
