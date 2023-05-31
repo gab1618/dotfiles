@@ -4,6 +4,6 @@ cp ~/.tmux.conf.local ./files/.tmux.conf.local
 cp ~/.config/picom/picom.conf ./files/picom.conf
 cp ~/.config/polybar/config ./files/polybarconfig
 cp -r ~/.config/nvim ./files
-cp ~/.config/alacritty/alacritty.yml ./files/alacritty.yml
+cp -r ~/.config/alacritty ./files
 cp -r ~/.config/rofi ./files
 cp ~/.zshrc ./files/.zshrc

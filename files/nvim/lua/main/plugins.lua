@@ -1,4 +1,4 @@
-vim.cmd.packadd('packer.nvim')
+vim.cmd [[packadd packer.nvim]]
 
 require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
@@ -16,6 +16,9 @@ require('packer').startup(function(use)
     end
   })
   use('folke/tokyonight.nvim')
+  use { "catppuccin/nvim", as = "catppuccin" }
+ 
+  -- treesiter
   use('nvim-treesitter/nvim-treesitter', { run = ":TSUpdate" })
   use {
     'VonHeikemen/lsp-zero.nvim',
@@ -47,4 +50,7 @@ require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   use('tpope/vim-fugitive')
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 end)
