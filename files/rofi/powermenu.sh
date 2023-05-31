@@ -1,38 +1,24 @@
 #!/usr/bin/env bash
 
-## Author : Aditya Shakya (adi1090x)
-## Github : @adi1090x
-#
-## Rofi   : Power Menu
-#
-## Available Styles
-#
-## style-1   style-2   style-3   style-4   style-5
-## style-6   style-7   style-8   style-9   style-10
-
-# Current Theme
-dir="$HOME/.config/rofi/powermenu/type-2"
-theme='style-1'
-
 # CMDs
 uptime="`uptime -p | sed -e 's/up //g'`"
 host=`hostname`
 
 # Options
-shutdown=''
-reboot=''
-lock=''
-suspend=''
-logout=''
-yes=''
-no=''
+shutdown=󰐥
+reboot=󰜉
+lock=󰍁
+cancel=󰜺
+logout=󰗽
+yes=󰄬
+no=󰅖
 
 # Rofi CMD
 rofi_cmd() {
 	rofi -dmenu \
 		-p "Uptime: $uptime" \
 		-mesg "Uptime: $uptime" \
-		-theme ${dir}/${theme}.rasi
+		-theme $HOME/.config/rofi/powermenu.rasi
 }
 
 # Confirmation CMD
@@ -45,7 +31,7 @@ confirm_cmd() {
 		-dmenu \
 		-p 'Confirmation' \
 		-mesg 'Are you Sure?' \
-		-theme ${dir}/${theme}.rasi
+		-theme $HOME/.config/rofi/powermenu.rasi
 }
 
 # Ask for confirmation
@@ -55,7 +41,7 @@ confirm_exit() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-	echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | rofi_cmd
+	echo -e "$cancel\n$lock\n$logout\n$reboot\n$shutdown" | rofi_cmd
 }
 
 # Execute Command
@@ -66,19 +52,11 @@ run_cmd() {
 			systemctl poweroff
 		elif [[ $1 == '--reboot' ]]; then
 			systemctl reboot
-		elif [[ $1 == '--suspend' ]]; then
-			mpc -q pause
-			amixer set Master mute
-			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
-			if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
-				openbox --exit
-			elif [[ "$DESKTOP_SESSION" == 'bspwm' ]]; then
-				bspc quit
-			elif [[ "$DESKTOP_SESSION" == 'i3' ]]; then
+			if [[ "$DESKTOP_SESSION" == 'i3' ]]; then
 				i3-msg exit
-			elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
-				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
+			elif [[ "$DESKTOP_SESSION" == 'sway' ]]; then
+				swaymsg exit
 			fi
 		fi
 	else
@@ -96,10 +74,10 @@ case ${chosen} in
 		run_cmd --reboot
         ;;
     $lock)
-		if [[ -x '/usr/bin/betterlockscreen' ]]; then
-			betterlockscreen -l
-		elif [[ -x '/usr/bin/i3lock' ]]; then
-			i3lock
+		if [[ "$DESKTOP_SESSION" == 'i3' ]]; then
+			betterlockscreen --time-format "%I:%M %p" -l dim
+		elif [[ "$DESKTOP_SESSION" == 'sway' ]]; then
+			swaylock -f --font Inter --font-size 14 -i /media/Media/Pictures/evening-sky.png
 		fi
         ;;
     $suspend)
@@ -107,5 +85,8 @@ case ${chosen} in
         ;;
     $logout)
 		run_cmd --logout
+        ;;
+    $cancel)
+		exit 0
         ;;
 esac

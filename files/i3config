@@ -5,8 +5,6 @@ floating_modifier $mod
 
 bindsym $mod+d exec rofi -show drun
 
-bindsym $mod+p exec --no-startup-id ~/.config/rofi/launchers/type-3/launcher.sh
-
 exec_always --no-startup-id numlockx on
 
 exec --no-startup-id dex --autostart --environment i3
@@ -164,7 +162,7 @@ exec_always feh --bg-fill ~/assets/wallpaper.png
 
 hide_edge_borders both
 
-font pango:monospace 10
+font pango:FiraCode Nerd Font 10
 
 # client.focused          #4c7899 #81A1C1 #2E3440 #2e9ef4   #81A1C1
 # client.focused_inactive #333333 #5d6678 #ffffff #484e50   #5f676a
