@@ -19,6 +19,7 @@ height = 32
 ;offset-y = 1%
 ;radius = 4.0
 fixed-center = false
+enable-ipc = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}

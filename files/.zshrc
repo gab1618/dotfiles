@@ -36,3 +36,6 @@ alias exa="exa --icons"
 export SPRING_HOME="$HOME/.spring"
 export PATH="$PATH:$SPRING_HOME/bin"
 export GCM_CREDENTIAL_STORE="cache"
+export GOPATH="$HOME/gopath"
+
+export ANDROID_HOME="$HOME/Android/Sdk"

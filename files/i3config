@@ -13,11 +13,6 @@ exec --no-startup-id dex --autostart --environment i3
 
 exec polybar main
 
-#bar {
-  #mode hide
-  #status_command i3status
-#}
-
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -56,6 +51,7 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+bindsym $mod+b exec polybar-msg cmd toggle
 
 # move focused window
 bindsym $mod+Shift+j move left
@@ -141,12 +137,6 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
@@ -169,8 +159,8 @@ bindsym $mod+r mode "resize"
 # Appearance
 
 exec_always picom --config ~/.config/picom.conf
-exec_always picom --experimental-backends --backend glx -f
-exec_always feh --bg-fill ~/Images/wallpapers/bar.png
+exec_always picom
+exec_always feh --bg-fill ~/assets/wallpaper.png
 
 hide_edge_borders both
 
@@ -186,7 +176,13 @@ client.unfocused        #10101a #10101a #888888 #292d2e   #2E3440
 
 set_from_resource $foreground foreground #C6C6C6
 set_from_resource $background background #1C1C1C
+
 set_from_resource $cursorColor cursorColor #C6C6C6
+
+workspace_layout tabbed
 
 for_window [class="GitHub.UI"] floating enable
 for_window [class="GitHub.UI"] move position center
+
+default_border pixel 1
+default_floating_border pixel 1

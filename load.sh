@@ -7,3 +7,4 @@ cp -r ./files/nvim ~/.config/
 cp ./files/alacritty.yml ~/.config/alacritty/alacritty.yml 
 cp -r ./files/rofi ~/.config
 cp ./files/.zshrc ~/.zshrc
+cp -r ./files/assets ~/
