@@ -16,6 +16,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 lsp.set_preferences({
     
 })
+
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false} 
 

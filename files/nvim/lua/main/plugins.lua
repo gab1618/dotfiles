@@ -50,6 +50,7 @@ require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   use('tpope/vim-fugitive')
+  use("theprimeagen/harpoon")
   if packer_bootstrap then
     require('packer').sync()
   end
