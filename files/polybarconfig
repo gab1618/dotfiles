@@ -1,11 +1,11 @@
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #0f0f17
+background = #11111b
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
-primary = #542ce6
+primary = #fab387
 secondary = #e60053
 alert = #bd2c40
 
@@ -35,6 +35,7 @@ padding-right = 2
 
 module-margin-left = 1
 module-margin-right = 2
+
 
 font-0 = siji:pixelsize=12;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
