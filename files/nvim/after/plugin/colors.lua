@@ -43,7 +43,7 @@ require("catppuccin").setup({
 
 function SetupColors(color)
 	color = color or "catppuccin"
-	vim.cmd.colorscheme(color)
+    vim.cmd.colorscheme(color)
 end
 
 SetupColors()

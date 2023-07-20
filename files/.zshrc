@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME_GIT_SHOW_UPSTREAM="true"
-ZSH_THEME="refined"
+ZSH_THEME="spaceship"
 plugins=(
 	git
 	zsh-autosuggestions
@@ -39,3 +39,14 @@ export GCM_CREDENTIAL_STORE="cache"
 export GOPATH="$HOME/gopath"
 
 export ANDROID_HOME="$HOME/Android/Sdk"
+
+# set JAVA_HOME in asdf integration
+. ~/.asdf/plugins/java/set-java-home.zsh
+
+# pnpm
+export PNPM_HOME="/home/gabrielbrandao/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
