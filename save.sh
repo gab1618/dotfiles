@@ -7,3 +7,4 @@ cp -r ~/.config/nvim ./files
 cp -r ~/.config/alacritty ./files
 cp -r ~/.config/rofi ./files
 cp ~/.zshrc ./files/.zshrc
+cp ~/kubecompletion.sh ./files/kubecompletion.sh

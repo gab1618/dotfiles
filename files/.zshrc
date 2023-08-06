@@ -11,6 +11,7 @@ bindkey "^n" autosuggest-accept
 
 source $ZSH/oh-my-zsh.sh
 source "$HOME/.asdf/asdf.sh"
+source "$HOME/kubecompletion.sh"
 
 ZSH_AUTOSUGGEST_STRATEGY=(
   "completion"
@@ -50,3 +51,4 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
