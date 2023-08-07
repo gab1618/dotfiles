@@ -1,3 +1,5 @@
+./clean.sh
+
 cp ~/.config/i3/config ./files/i3config
 cp ~/.tmux.conf ./files/.tmux.conf
 cp ~/.tmux.conf.local ./files/.tmux.conf.local

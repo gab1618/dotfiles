@@ -7,3 +7,4 @@ rm -rf ./files/rofi
 rm -rf ./files/.tmux.conf
 rm -rf ./files/.tmux.conf.local
 rm -rf ./files/.zshrc
+rm -rf ./files/kubecompletion.sh
