@@ -159,7 +159,7 @@ bindsym $mod+r mode "resize"
 
 exec_always picom --config ~/.config/picom.conf
 exec_always picom --experimental-backends -f
-exec_always feh --bg-fill ~/assets/wallpaper9.jpg
+exec_always feh --bg-fill ~/assets/wallpaper11.jpeg
 
 hide_edge_borders both
 
