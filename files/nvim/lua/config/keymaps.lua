@@ -10,5 +10,3 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
-
-vim.keymap.set("n", "<C-w>", ":bp<CR>")

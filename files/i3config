@@ -4,6 +4,7 @@ set $mod Mod4
 floating_modifier $mod
 
 bindsym $mod+d exec rofi -show drun
+bindsym $mod+p exec rofi -show drun
 
 exec_always --no-startup-id numlockx on
 
