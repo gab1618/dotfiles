@@ -32,7 +32,6 @@ alias tconfig="nvim ~/.config/tmux/tmux.conf"
 alias cl="clear"
 alias pn="pnpm"
 alias exa="exa --icons"
-alias dockerclean="docker rmi $(docker images -f dangling=true -q) --force" 
 
 # Instalation paths
 
