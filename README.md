@@ -32,6 +32,6 @@ chmod +x ./clean.sh
 
 ## Dependencies
 
-* Neovim + Packer.nvim
+* Neovim
 * zsh + oh-my-zsh
 * i3 + polybar + Picom + rofi
