@@ -1,5 +1,4 @@
 cp -r ./files/tmux ~/.config
 cp -r ./files/nvim ~/.config
+cp -r ./files/completions ~/completions
 cp ./files/.zshrc ~/.zshrc
-cp ./files/kubecompletion.sh ~/kubecompletion.sh
-cp ./files/ghcompletion.sh ~/ghcompletion.sh

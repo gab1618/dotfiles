@@ -11,8 +11,10 @@ bindkey "^n" autosuggest-accept
 
 source $ZSH/oh-my-zsh.sh
 source "$HOME/.asdf/asdf.sh"
-source "$HOME/kubecompletion.sh"
-source "$HOME/ghcompletion.sh"
+source "$HOME/completions/ghcompletion.sh"
+source "$HOME/completions/kubecompletion.sh"
+source "$HOME/completions/kindcompletion.sh"
+source "$HOME/completions/localstack-completion-zsh.sh"
 
 ZSH_AUTOSUGGEST_STRATEGY=(
   "completion"
@@ -39,6 +41,7 @@ export SPRING_HOME="$HOME/.spring"
 export PATH="$PATH:$SPRING_HOME/bin"
 export GCM_CREDENTIAL_STORE="cache"
 export GOPATH="$HOME/gopath"
+export PATH="$PATH:$GOPATH/bin"
 
 export ANDROID_HOME="$HOME/Android/Sdk"
 
