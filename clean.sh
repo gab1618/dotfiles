@@ -6,4 +6,3 @@ rm -rf ./files/polybarconfig
 rm -rf ./files/rofi
 rm -rf ./files/tmux
 rm -rf ./files/.zshrc
-rm -rf ./files/completions

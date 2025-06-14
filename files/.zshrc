@@ -11,10 +11,8 @@ bindkey "^n" autosuggest-accept
 
 source $ZSH/oh-my-zsh.sh
 source "$HOME/.asdf/asdf.sh"
-source "$HOME/completions/ghcompletion.sh"
-source "$HOME/completions/kubecompletion.sh"
-source "$HOME/completions/kindcompletion.sh"
-source "$HOME/completions/localstack-completion-zsh.sh"
+
+fpath+=~/.zsh/completions
 
 ZSH_AUTOSUGGEST_STRATEGY=(
   "completion"
@@ -33,7 +31,8 @@ alias tlist="tmux list-sessions"
 alias tconfig="nvim ~/.config/tmux/tmux.conf"
 alias cl="clear"
 alias pn="pnpm"
-alias exa="exa --icons"
+alias eza="eza --icons"
+alias ls="eza"
 
 # Instalation paths
 
@@ -42,8 +41,9 @@ export PATH="$PATH:$SPRING_HOME/bin"
 export GCM_CREDENTIAL_STORE="cache"
 export GOPATH="$HOME/gopath"
 export PATH="$PATH:$GOPATH/bin"
-
 export ANDROID_HOME="$HOME/Android/Sdk"
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
 # set JAVA_HOME in asdf integration
 . ~/.asdf/plugins/java/set-java-home.zsh
@@ -63,3 +63,9 @@ esac
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+export ANDROID_TOOLS_PATH="$ANDROID_HOME/build-tools/35.0.0/"
+export PATH="$PATH:$ANDROID_TOOLS_PATH"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
