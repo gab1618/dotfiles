@@ -1,9 +1,10 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "rust_analyser" }
+local servers = { "html", "cssls", "rust_analyser", "ts_ls" }
 vim.lsp.enable(servers)
 
 -- read :h vim.lsp.config for changing options of lsp servers 
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 
 vim.lsp.config('rust_analyzer', {
   settings = {
@@ -15,3 +16,5 @@ vim.lsp.config('rust_analyzer', {
   }
 })
 require('lspconfig').rust_analyzer.setup{}
+
+require("lspconfig").ts_ls.setup{}
