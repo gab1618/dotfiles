@@ -10,7 +10,6 @@ plugins=(
 bindkey "^n" autosuggest-accept
 
 source $ZSH/oh-my-zsh.sh
-source "$HOME/.asdf/asdf.sh"
 
 fpath+=~/.zsh/completions
 
@@ -27,4 +26,3 @@ alias tlist="tmux list-sessions"
 alias tconfig="nvim ~/.config/tmux/tmux.conf"
 alias cl="clear"
 alias pn="pnpm"
-

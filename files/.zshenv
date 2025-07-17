@@ -12,6 +12,8 @@ export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 # set JAVA_HOME in asdf integration
 #. ~/.asdf/plugins/java/set-java-home.zsh
 
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
