@@ -1,5 +1,9 @@
-rm -rf ./files/alacritty
 rm -rf ./files/nvim
 rm -rf ./files/tmux
 rm -rf ./files/.zshrc
 rm -rf ./files/.zshenv
+rm -rf ./files/sway
+rm -rf ./files/wofi
+rm -rf ./files/waybar
+rm -rf ./files/eww
+rm -rf ./files/kitty

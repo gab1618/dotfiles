@@ -1,0 +1,55 @@
+(include "eww_vars.yuck")
+
+(defwidget calendarbox []
+  (centerbox :height "40" :width "160" :halign "center" :valign "center" :class "calendar"
+    (box :height "40" :width "50" :halign "center" :valign "center" :class "cell"
+      (label :class "label"  :text DAY)
+    )
+    (box :height "40" :width "50" :halign "center" :valign "center" :class "cell"
+      (label :class "label"  :text MONTH)
+    )
+    (box :height "40" :width "50" :halign "center" :valign "center" :class "cell"
+      (label :class "label"  :text YEAR)
+    )
+  )
+)
+
+(defwidget userinfobox []
+  (centerbox :height "40" :width "160" :halign "center" :valign "center" :class "userinfo-parent"
+    (box :height "40" :width "50" :halign "center" :valign "center" :class "userinfo-child"
+      (button :onclick "kitty & disown" :class "button"
+        (label :class "icon-label"  :text "")
+      )
+    )
+    (box :height "40" :width "50" :halign "center" :valign "center" :class "userinfo-child"
+      (button :onclick "GTK_THEME=catppuccin-mocha-flamingo-standard+default nautilus & disown" :class "button"
+        (label :class "icon-label"  :text "")
+      )
+    )
+    (box :height "40" :width "50" :halign "center" :valign "center" :class "userinfo-child"
+      (button :onclick "eww open powermenu" :class "button"
+        (label :class "icon-label"  :text "󰤂")
+      )
+    )
+  )
+)
+
+(defwidget powermenu []
+  (centerbox :height "40" :width "160" :halign "center" :valign "center" :class "userinfo-parent"
+    (box :height "40" :width "50" :halign "center" :valign "center" :class "userinfo-child"
+      (button :onclick "systemctl poweroff" :class "poweroff-button"
+        (label :class "icon-label"  :text "⏻")
+      )
+    )
+    (box :height "40" :width "50" :halign "center" :valign "center" :class "userinfo-child"
+      (button :onclick "systemctl suspend"  :class "suspend-button"
+        (label :class "icon-label"  :text "⏾")
+      )
+    )
+    (box :height "40" :width "50" :halign "center" :valign "center" :class "userinfo-child"
+      (button :onclick "eww close powermenu" :class "button"
+        (label :class "icon-label"  :text "⨯")
+      )
+    )
+  )
+)

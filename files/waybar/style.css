@@ -1,0 +1,101 @@
+* {
+  font-family: FiraCode Nerd Font;
+  font-size: 14px;
+  padding: 0px;
+  background: transparent;
+}
+
+window#waybar {
+  background-image: linear-gradient(to bottom, #11111b 100%);
+  padding: 0px;
+  border-style: none;
+}
+
+#battery,
+#network,
+#clock,
+#custom-applauncher,
+#tray,
+#workspaces,
+#cpu,
+#pulseaudio {
+  background-image: linear-gradient(to bottom, #181825 100%);
+
+  margin: 6px;
+  margin-right: 0px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: #b4befe;
+
+  border-style: none;
+  transition-duration: 120ms;
+}
+
+#clock {
+  margin-right: 6px;
+  background-image: linear-gradient(to bottom, #eba0ac 100%);
+  color: #11111b;
+}
+
+#pulseaudio:hover {
+  background-image: linear-gradient(to bottom, #eba0ac 100%);
+  color: #11111b;
+  transition-duration: 120ms;
+}
+
+#tray menu {
+  background-color: #141216;
+  color: #d8cab8;
+  padding: 4px;
+}
+#tray menu menuitem {
+  background-image: linear-gradient(to bottom, #27232b 100%);
+
+  margin: 3px;
+  color: #d8cab8;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: #27232b;
+}
+#tray menu menuitem:hover {
+  background-image: linear-gradient(to bottom, #27232b 100%);
+  color: #cba6f7;
+  font-weight: bold;
+}
+
+#workspaces button {
+  transition-duration: 100ms;
+  all: initial;
+  min-width: 0;
+  font-weight: bold;
+  color: #585b70;
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+}
+
+#workspaces button:hover {
+  transition-duration: 120ms;
+  color: #cba6f7;
+}
+#workspaces button.focused {
+  color: #cba6f7;
+  font-weight: bold;
+}
+#workspaces button.active {
+  color: #cba6f7;
+  font-weight: bold;
+}
+#workspaces button.urgent {
+  color: #fab387;
+}
+
+#battery {
+  background-color: #222222;
+  color: #1d2021;
+}
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+  color: #1d2021;
+  background-color: #f38ba8;
+}
