@@ -30,6 +30,7 @@ export ANDROID_TOOLS_PATH="$ANDROID_HOME/build-tools/35.0.0/"
 export PATH="$PATH:$ANDROID_TOOLS_PATH"
 
 export GTK_THEME=catppuccin-mocha-flamingo-standard+default
+export BROWSER="zen-browser"
 
 #autoload -U +X bashcompinit && bashcompinit
 #complete -o nospace -C /usr/bin/terraform terraform

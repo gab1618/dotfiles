@@ -1,5 +1,7 @@
 # My dotfiles
 
+Feel free to copy them, just keep in mind it won't just work out of the box.
+
 ### Load configurations locally:
 ```bash
 ./load.sh 
@@ -9,12 +11,6 @@
 ```bash
 ./save.sh
 ```
-
-### Load WSL-only configurations(exclude the wm and visual resources dotfiles):
-```bash
-./load-wsl.sh
-```
-This only loads neovim, tmux and zsh
 
 ### Remove all saved dotfiles:
 ```bash
@@ -26,12 +22,14 @@ You may need to give execution permission to the scripts:
 ```bash
 chmod +x ./load.sh
 chmod +x ./save.sh
-chmod +x ./load-wsl.sh
 chmod +x ./clean.sh
 ```
 
 ## Dependencies
 
 * Neovim
-* zsh + oh-my-zsh
-* i3 + polybar + Picom + rofi
+* Kitty
+* zsh + oh-my-zsh + Tmux
+* Sway + Waybar + Wofi + Eww
+* Grim, slurp, wl-clipboard
+* Catppuccin GTK theme
