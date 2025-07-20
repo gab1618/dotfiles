@@ -33,3 +33,9 @@ chmod +x ./clean.sh
 * Sway + Waybar + Wofi + Eww
 * Grim, slurp, wl-clipboard
 * Catppuccin GTK theme
+
+## Screenshots
+
+(In case you are wondering why my wallpaper is named 'Frieren')
+
+![Desktop](./screenshots/screenshot-2025-07-20-104147.png)
