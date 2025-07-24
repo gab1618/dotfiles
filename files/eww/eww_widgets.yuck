@@ -15,10 +15,17 @@
 )
 
 (defwidget pokebox []
-  (centerbox :height "240" :width "80" :halign "center" :valign "center" :class "pokebox" :orientation "vertical"
+  (box :height "240" :width "80" :halign "center" :valign "center" :class "pokebox" :orientation "vertical"
     (box :height "80" :width "80" :halign "center" :valign "center" :class "pokemon"
       (image
-        :path "./assets/misdreavus.png"
+        :path "./assets/serperior.png"
+        :image-width 80
+        :image-height 80
+      )
+    )
+    (box :height "80" :width "80" :halign "center" :valign "center" :class "pokemon"
+      (image
+        :path "./assets/whimsicott.png"
         :image-width 80
         :image-height 80
       )
@@ -26,13 +33,6 @@
     (box :height "80" :width "80" :halign "center" :valign "center" :class "pokemon"
       (image
         :path "./assets/mismagius.png"
-        :image-width 80
-        :image-height 80
-      )
-    )
-    (box :height "80" :width "80" :halign "center" :valign "center" :class "pokemon"
-      (image
-        :path "./assets/flutter-mane.png"
         :image-width 80
         :image-height 80
       )
