@@ -14,6 +14,33 @@
   )
 )
 
+(defwidget pokebox []
+  (centerbox :height "240" :width "80" :halign "center" :valign "center" :class "pokebox" :orientation "vertical"
+    (box :height "80" :width "80" :halign "center" :valign "center" :class "pokemon"
+      (image
+        :path "./assets/misdreavus.png"
+        :image-width 80
+        :image-height 80
+      )
+    )
+    (box :height "80" :width "80" :halign "center" :valign "center" :class "pokemon"
+      (image
+        :path "./assets/mismagius.png"
+        :image-width 80
+        :image-height 80
+      )
+    )
+    (box :height "80" :width "80" :halign "center" :valign "center" :class "pokemon"
+      (image
+        :path "./assets/flutter-mane.png"
+        :image-width 80
+        :image-height 80
+      )
+    )
+  )
+)
+
+
 (defwidget userinfobox []
   (centerbox :height "40" :width "160" :halign "center" :valign "center" :class "userinfo-parent"
     (box :height "40" :width "50" :halign "center" :valign "center" :class "userinfo-child"

@@ -26,3 +26,6 @@ alias tlist="tmux list-sessions"
 alias tconfig="nvim ~/.config/tmux/tmux.conf"
 alias cl="clear"
 alias pn="pnpm"
+
+# bun completions
+[ -s "/home/gabriel/.bun/_bun" ] && source "/home/gabriel/.bun/_bun"
