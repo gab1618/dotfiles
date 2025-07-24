@@ -27,15 +27,15 @@ chmod +x ./clean.sh
 
 ## Dependencies
 
-* Neovim
+* FiraCode Nerd Font
+* Neovim + NvChad
 * Kitty
-* zsh + oh-my-zsh + Tmux
+* zsh + oh-my-zsh
+* Tmux + tpm
 * Sway + Waybar + Wofi + Eww
 * Grim, slurp, wl-clipboard
 * Catppuccin GTK theme
 
 ## Screenshots
-
-(In case you are wondering why my wallpaper is named 'Frieren')
 
 ![Desktop](./screenshots/screenshot-2025-07-20-104147.png)
