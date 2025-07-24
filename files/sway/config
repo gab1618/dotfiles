@@ -4,7 +4,7 @@ output HDMI-A-1 resolution 1366x768 position 0,0
 font pango:FiraCode Nerd Font Mono 10
 
 # Wallpaper
-output * bg "~/Pictures/frieren.png" fill
+output * bg "~/.config/sway/assets/frieren.png" fill
 
 exec_always ~/.config/eww/scripts/start.sh
 
