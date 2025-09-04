@@ -3,7 +3,7 @@ FROM archlinux
 ARG INSTALL_GUI=false
 
 RUN pacman -Syu --noconfirm && \
-  pacman -S zsh neovim tmux git --noconfirm
+  pacman -S zsh neovim tmux git base-devel --noconfirm
 
 COPY ./assets/ /tmp/assets
 
