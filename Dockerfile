@@ -3,6 +3,8 @@ FROM archlinux
 RUN pacman -Syu --noconfirm && \
   pacman -S zsh neovim tmux git --noconfirm
 
+RUN chsh -s /bin/zsh
+
 WORKDIR /root
 
 COPY ./files .
