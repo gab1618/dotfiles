@@ -13,7 +13,7 @@ RUN git config --global user.name "Gabriel C. Brandão" && \
 COPY ./assets/ /tmp/assets
 
 RUN if [ "$INSTALL_GUI" = "true" ]; then \
-    pacman -S sway swaybg waybar kitty --noconfirm; \
+    pacman -S sway swaybg waybar kitty grim slurp wl-copy wofi-emoji --noconfirm; \
 
     cp -r /tmp/assets/fonts/* /usr/share/fonts/ && \
     echo "Rebuilding font cache..." && \
