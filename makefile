@@ -2,6 +2,7 @@
 help:
 	@echo "Commands available"
 	@echo "[install]: replace all your settings with this repo's"
+	@echo "[fetch]: fetch your current config files to the repo"
 
 .PHONY: install
 install:
