@@ -1,7 +1,7 @@
 FROM archlinux
 
 RUN pacman -Syu --noconfirm && \
-  pacman -S zsh neovim tmux git --noconfirm
+  pacman -S zsh neovim tmux git sway swaybg waybar --noconfirm
 
 RUN chsh -s /bin/zsh
 
