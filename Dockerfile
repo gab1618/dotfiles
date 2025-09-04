@@ -8,7 +8,7 @@ RUN pacman -Syu --noconfirm && \
 COPY ./assets/ /tmp/assets
 
 RUN if [ "$INSTALL_GUI" = "true" ]; then \
-    pacman -S sway swaybg waybar --noconfirm; \
+    pacman -S sway swaybg waybar kitty --noconfirm; \
 
     cp -r /tmp/assets/fonts/* /usr/share/fonts/ && \
     echo "Rebuilding font cache..." && \
