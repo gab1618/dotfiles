@@ -34,4 +34,9 @@ RUN rm -rf "/root/.oh-my-zsh/custom/themes/spaceship.zsh-theme" && \
 RUN git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && \
   ~/.tmux/plugins/tpm/bin/install_plugins
 
+# Configuring git
+RUN git config --global user.name "Gabriel C. Brandão" && \
+  git config --global user.email "biel.brandao2004@gmail.com" && \
+  git config --global core.editor nvim;
+
 ENTRYPOINT ["/bin/zsh"]
