@@ -10,7 +10,6 @@ install:
 	mkdir -p ~/.config
 	cp -r ./files/.config/* ~/.config
 	cp ./files/.zshrc ~/.zshrc
-	cp ./files/.zshenv ~/.zshenv
 
 .PHONY: fetch
 fetch:
@@ -23,4 +22,3 @@ fetch:
 	cp -r ~/.config/waybar ./files/.config/
 	cp -r ~/.config/eww ./files/.config/
 	cp ~/.zshrc ./files/.zshrc
-	cp ~/.zshenv ./files/.zshenv
