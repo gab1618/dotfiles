@@ -3,12 +3,15 @@ FROM archlinux
 ARG INSTALL_GUI=false
 
 RUN pacman -Syu --noconfirm && \
-  pacman -S zsh neovim tmux git base-devel --noconfirm
+  pacman -S zsh neovim tmux git base-devel eza --noconfirm
 
 # Configuring git
 RUN git config --global user.name "Gabriel C. Brandão" && \
   git config --global user.email "biel.brandao2004@gmail.com" && \
-  git config --global core.editor nvim;
+  git config --global core.editor nvim && \
+  git config --global rerere.enabled true && \
+  git config --global column.ui auto && \
+  git config --global init.defaultbranch main;
 
 COPY ./assets/ /tmp/assets
 
