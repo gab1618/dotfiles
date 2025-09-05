@@ -3,7 +3,7 @@ FROM archlinux
 ARG INSTALL_GUI=false
 
 RUN pacman -Syu --noconfirm && \
-  pacman -S zsh neovim tmux git base-devel --noconfirm
+  pacman -S zsh neovim tmux git base-devel eza --noconfirm
 
 # Configuring git
 RUN git config --global user.name "Gabriel C. Brandão" && \
