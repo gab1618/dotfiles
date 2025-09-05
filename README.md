@@ -2,29 +2,6 @@
 
 Feel free to copy them, just keep in mind it won't just work out of the box.
 
-### Load configurations locally:
-```bash
-./load.sh 
-```
-
-### Save current configurations:
-```bash
-./save.sh
-```
-
-### Remove all saved dotfiles:
-```bash
-./clean.sh
-```
-This is usefull if you are editing the scripts since all scripts and dotfiles are in the same directory
-
-You may need to give execution permission to the scripts:
-```bash
-chmod +x ./load.sh
-chmod +x ./save.sh
-chmod +x ./clean.sh
-```
-
 ## Dependencies
 
 * FiraCode Nerd Font
