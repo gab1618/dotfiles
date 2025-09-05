@@ -8,12 +8,18 @@ help:
 install:
 	@echo "Installing..."
 	mkdir -p ~/.config
-	cp -r ./files/.config/* ~/.config
+
+	cp ./files/.config/tmux/tmux.conf ~/.config/tmux/tmux.conf
+	cp -r ./files/.config/nvim ~/.config
+	cp -r ./files/.config/sway ~/.config
+	cp -r ./files/.config/wofi ~/.config
+	cp -r ./files/.config/kitty ~/.config
+	cp -r ./files/.config/waybar ~/.config
+	cp -r ./files/.config/eww ~/.config
 	cp ./files/.zshrc ~/.zshrc
 
 .PHONY: fetch
 fetch:
-	mkdir -p ~/.config/tmux/
 	cp ~/.config/tmux/tmux.conf ./files/.config/tmux/tmux.conf
 	cp -r ~/.config/nvim ./files/.config/
 	cp -r ~/.config/sway ./files/.config/
