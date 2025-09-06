@@ -16,6 +16,7 @@ install-full:
 	cp -r ./files/.config/kitty ~/.config
 	cp -r ./files/.config/waybar ~/.config
 	cp -r ./files/.config/eww ~/.config
+	cp -r ./files/.config/hypr ~/.config
 	cp ./files/.zshrc ~/.zshrc
 
 
@@ -37,6 +38,7 @@ fetch:
 	cp -r ~/.config/kitty ./files/.config/
 	cp -r ~/.config/waybar ./files/.config/
 	cp -r ~/.config/eww ./files/.config/
+	cp -r ~/.config/hypr ./files/.config/
 	cp ~/.zshrc ./files/.zshrc
 
 FULL?=false
