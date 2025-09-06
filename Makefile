@@ -41,7 +41,6 @@ fetch:
 	cp -r ~/.config/hypr ./files/.config/
 	cp ~/.zshrc ./files/.zshrc
 
-FULL?=false
 .PHONY: build-image
 build-image:
-	podman build --build-arg INSTALL_GUI=$(FULL) -t dotfiles .
+	podman build -t dotfiles .

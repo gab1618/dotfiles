@@ -1,7 +1,5 @@
 FROM archlinux
 
-ARG INSTALL_GUI=false
-
 RUN pacman -Syu --noconfirm && \
   pacman -S zsh neovim tmux git base-devel eza wget --noconfirm
 
@@ -12,22 +10,6 @@ RUN git config --global user.name "Gabriel C. Brandão" && \
   git config --global rerere.enabled true && \
   git config --global column.ui auto && \
   git config --global init.defaultbranch main;
-
-RUN if [ "$INSTALL_GUI" = "true" ]; then \
-    pacman -S sway swaybg waybar kitty grim slurp unzip --noconfirm; \
-
-    mkdir -p /tmp/firacode && \
-    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip -O /tmp/firacode/firacode.zip && \
-    unzip /tmp/firacode/firacode.zip && \
-    cp -r /tmp/firacode/* /usr/share/fonts/ && \
-    echo "Rebuilding font cache..." && \
-    fc-cache -f && \
-    rm -rf /tmp/assets/fonts && \
-    echo "Font installation complete."; \
-
-  else \
-    echo "Skipping gui apps install"; \
-  fi
 
 RUN chsh -s /bin/zsh
 ENV ZSH=/root/.oh-my-zsh
