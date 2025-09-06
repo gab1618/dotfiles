@@ -3,7 +3,7 @@ FROM archlinux
 ARG INSTALL_GUI=false
 
 RUN pacman -Syu --noconfirm && \
-  pacman -S zsh neovim tmux git base-devel eza --noconfirm
+  pacman -S zsh neovim tmux git base-devel eza wget --noconfirm
 
 # Configuring git
 RUN git config --global user.name "Gabriel C. Brandão" && \
@@ -13,12 +13,13 @@ RUN git config --global user.name "Gabriel C. Brandão" && \
   git config --global column.ui auto && \
   git config --global init.defaultbranch main;
 
-COPY ./assets/ /tmp/assets
-
 RUN if [ "$INSTALL_GUI" = "true" ]; then \
-    pacman -S sway swaybg waybar kitty grim slurp wl-copy wofi-emoji --noconfirm; \
+    pacman -S sway swaybg waybar kitty grim slurp unzip --noconfirm; \
 
-    cp -r /tmp/assets/fonts/* /usr/share/fonts/ && \
+    mkdir -p /tmp/firacode && \
+    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip -O /tmp/firacode/firacode.zip && \
+    unzip /tmp/firacode/firacode.zip && \
+    cp -r /tmp/firacode/* /usr/share/fonts/ && \
     echo "Rebuilding font cache..." && \
     fc-cache -f && \
     rm -rf /tmp/assets/fonts && \
