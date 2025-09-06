@@ -38,3 +38,8 @@ fetch:
 	cp -r ~/.config/waybar ./files/.config/
 	cp -r ~/.config/eww ./files/.config/
 	cp ~/.zshrc ./files/.zshrc
+
+FULL?=false
+.PHONY: build-image
+build-image:
+	podman build --build-arg INSTALL_GUI=$(FULL) -t dotfiles .
