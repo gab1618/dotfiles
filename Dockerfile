@@ -18,7 +18,7 @@ ENV ZSH=/root/.oh-my-zsh
 
 WORKDIR /root
 
-COPY ./files .
+COPY ./src .
 
 # Install oh-my-zsh
 RUN git clone https://github.com/ohmyzsh/ohmyzsh.git $ZSH
