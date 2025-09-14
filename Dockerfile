@@ -3,7 +3,7 @@ FROM archlinux
 RUN pacman -Syu --noconfirm && \
   pacman -S zsh neovim tmux git base-devel eza --noconfirm
 
-# For GUI packages: pacman -S sway swaybg waybar kitty grim slurp hyprland hyprpaper
+# For GUI packages: pacman -S sway swaybg waybar kitty grim slurp wl-clipboard hyprland hyprpaper
 
 # Configuring git
 RUN git config --global user.name "Gabriel C. Brandão" && \
