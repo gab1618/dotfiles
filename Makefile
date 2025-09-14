@@ -18,6 +18,7 @@ install-full:
 	cp -r ./files/.config/eww ~/.config
 	cp -r ./files/.config/hypr ~/.config
 	cp ./files/.zshrc ~/.zshrc
+	cp ./files/.p10k.zsh ~/.p10k.zsh
 
 
 .PHONY: install-cli
@@ -28,6 +29,7 @@ install-cli:
 	cp ./files/.config/tmux/tmux.conf ~/.config/tmux/tmux.conf
 	cp -r ./files/.config/nvim ~/.config
 	cp ./files/.zshrc ~/.zshrc
+	cp ./files/.p10k.zsh ~/.p10k.zsh
 
 .PHONY: fetch
 fetch:
@@ -40,6 +42,7 @@ fetch:
 	cp -r ~/.config/eww ./files/.config/
 	cp -r ~/.config/hypr ./files/.config/
 	cp ~/.zshrc ./files/.zshrc
+	cp ~/.p10k.zsh ./files/.p10k.zsh
 
 .PHONY: build-image
 build-image:
