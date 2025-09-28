@@ -7,11 +7,10 @@ Feel free to copy them, just keep in mind it won't just work out of the box.
 * FiraCode Nerd Font
 * Neovim + NvChad
 * Kitty
-* zsh + oh-my-zsh
+* zsh + oh-my-zsh + powerlevel10k
 * Tmux + tpm
-* Sway + Waybar + Wofi + Eww
+* Hyprland + Waybar + Wofi + Eww
 * Grim, slurp, wl-clipboard
-* Catppuccin GTK theme
 
 ## Screenshots
 
