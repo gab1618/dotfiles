@@ -19,47 +19,37 @@ window#waybar {
 #workspaces,
 #cpu,
 #pulseaudio {
-  background-image: linear-gradient(to bottom, #181825 100%);
-
   margin: 6px;
   margin-right: 0px;
-  padding: 4px 8px;
-  border-radius: 8px;
+  padding: 2px 6px;
   color: #b4befe;
 
   border-style: none;
-  transition-duration: 120ms;
 }
 
+#network {
+  color: #fab387;
+}
 #clock {
   margin-right: 6px;
-  background-image: linear-gradient(to bottom, #eba0ac 100%);
-  color: #11111b;
+  color: #eba0ac;
 }
-
-#pulseaudio:hover {
-  background-image: linear-gradient(to bottom, #eba0ac 100%);
-  color: #11111b;
-  transition-duration: 120ms;
+#pulseaudio {
+  color: #89b4fa;
 }
 
 #tray menu {
-  background-color: #141216;
+  background-color: #11111b;
   color: #d8cab8;
   padding: 4px;
 }
 #tray menu menuitem {
-  background-image: linear-gradient(to bottom, #181825 100%);
-
   margin: 3px;
   color: #d8cab8;
-  border-radius: 4px;
-  border-style: solid;
-  border-color: #181825;
+  border-style: none;
 }
 #tray menu menuitem:hover {
-  background-image: linear-gradient(to bottom, #181825 100%);
-  color: #cba6f7;
+  color: #fab387;
   font-weight: bold;
 }
 
@@ -68,7 +58,7 @@ window#waybar {
   all: initial;
   min-width: 0;
   font-weight: bold;
-  color: #585b70;
+  color: #313244;
   margin-right: 0.2cm;
   margin-left: 0.2cm;
 }
@@ -98,4 +88,8 @@ window#waybar {
 #battery.urgent {
   color: #1d2021;
   background-color: #f38ba8;
+}
+
+#cpu {
+  color: #cba6f7;
 }
