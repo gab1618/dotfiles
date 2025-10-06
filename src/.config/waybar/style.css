@@ -57,7 +57,7 @@ window#waybar {
   transition-duration: 100ms;
   all: initial;
   min-width: 0;
-  font-weight: bold;
+  font-weight: 500;
   color: #313244;
   margin-right: 0.2cm;
   margin-left: 0.2cm;
@@ -69,11 +69,11 @@ window#waybar {
 }
 #workspaces button.focused {
   color: #cba6f7;
-  font-weight: bold;
+  font-weight: 500;
 }
 #workspaces button.active {
   color: #cba6f7;
-  font-weight: bold;
+  font-weight: 500;
 }
 #workspaces button.urgent {
   color: #fab387;
