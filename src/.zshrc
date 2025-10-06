@@ -28,6 +28,7 @@ ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 
 alias cl="clear"
 alias ls="eza --icons"
+alias v="nvim"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
