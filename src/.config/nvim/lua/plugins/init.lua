@@ -1,19 +1,14 @@
 return {
   {
-    "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
-    opts = require "configs.conform",
-  },
-
-  {
     "neovim/nvim-lspconfig",
     config = function()
-      require "configs.lspconfig"
+      require "config.lspconfig"
     end,
   },
   {
     "catppuccin/nvim",
     name = "catppuccin",
+    priority = 1000,
   },
   {
     "christoomey/vim-tmux-navigator",
@@ -25,5 +20,5 @@ return {
       "TmuxNavigatePrevious",
       "TmuxNavigatorProcessList",
     },
-  },
+  }
 }
