@@ -5,7 +5,12 @@ return {
     version = '1.*',
     build = "cargo build --release",
     opts = {
-      keymap = { preset = 'default' },
+      keymap = {
+        preset = 'default',
+        ['<S-tab>'] = { 'select_prev', 'fallback' },
+        ['<tab>'] = { 'select_next', 'fallback' },
+        ['<Enter>'] = { 'accept' },
+      },
       appearance = {
         nerd_font_variant = 'mono'
       },
