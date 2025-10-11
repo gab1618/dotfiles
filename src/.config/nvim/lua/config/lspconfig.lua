@@ -15,8 +15,10 @@ vim.lsp.config("texlab", { capabilities = capabilities })
 
 vim.lsp.config("lua_ls", { capabilities = capabilities })
 
-vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP code action" })
-vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, { desc = "Format" })
+vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = "LSP code action" })
+vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "Format" })
+vim.keymap.set("n", "<leader>ld", vim.diagnostic.setloclist, { desc = "See diagnostic list" })
+vim.keymap.set("n", "<leader>lr", vim.lsp.buf.references, { desc = "See references" })
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
 vim.keymap.set("n", "gd", vim.lsp.buf.declaration, { desc = "Go to declaration" })
 vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
-vim.keymap.set("n", "ds", vim.diagnostic.setloclist, { desc = "Go to implementation" })
