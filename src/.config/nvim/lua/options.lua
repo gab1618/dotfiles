@@ -8,7 +8,6 @@ vim.g.snacks_animate = true
 
 vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
 
-
 vim.g.deprecation_warnings = false
 
 vim.g.trouble_lualine = true

@@ -7,7 +7,7 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   lazy = false,
-  config = function()
-    vim.keymap.set({"n"}, "<C-n>", "<cmd> Neotree toggle <cr>")
-  end
+  keys = {
+    {"<C-n>", "<cmd> Neotree toggle <cr>"}
+  }
 }
