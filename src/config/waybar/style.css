@@ -96,4 +96,9 @@ window#waybar {
 
 #mpris {
   color: #a6e3a1;
+  font-weight: 700;
+}
+
+#mpris.paused {
+  color: #45475a;
 }
