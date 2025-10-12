@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-  background-image: linear-gradient(to bottom, #11111b 100%);
+  background-color: #11111b;
   padding: 0px;
   border-style: none;
 }
@@ -92,4 +92,8 @@ window#waybar {
 
 #cpu {
   color: #cba6f7;
+}
+
+#mpris {
+  color: #a6e3a1;
 }

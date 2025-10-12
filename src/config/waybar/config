@@ -9,6 +9,7 @@
     "sway/workspaces"
   ],
   "modules-center": [
+    "mpris"
   ],
   "modules-right": [
     "cpu",
@@ -77,5 +78,17 @@
     "interval": 10,
     "format": " {}%",
     "max-length": 10
+  },
+  "mpris": {
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon} <i>{dynamic}</i>",
+    "player-icons": {
+      "default": "⏸",
+      "mpv": "🎵"
+    },
+    "status-icons": {
+      "paused": "▶"
+    },
+    "max-length": 32
   }
 }
