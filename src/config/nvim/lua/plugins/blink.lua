@@ -6,9 +6,19 @@ return {
     build = "cargo build --release",
     opts = {
       keymap = {
-        preset = 'default',
-        ['<S-tab>'] = { 'select_prev', 'fallback' },
-        ['<tab>'] = { 'select_next', 'fallback' },
+        preset = 'none',
+        ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
+        ['<C-e>'] = { 'hide', 'fallback' },
+        ['<C-y>'] = { 'select_and_accept', 'fallback' },
+        ['<C-n>'] = { 'select_and_accept', 'fallback' },
+
+        ['<C-b>'] = { 'scroll_documentation_up', 'fallback' },
+        ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
+
+        ['<Tab>'] = { 'select_next', 'fallback' },
+        ['<S-Tab>'] = { 'select_prev', 'fallback' },
+
+        ['<C-k>'] = { 'show_signature', 'hide_signature', 'fallback' },
       },
       appearance = {
         nerd_font_variant = 'mono'
