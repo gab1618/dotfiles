@@ -89,6 +89,6 @@
     "status-icons": {
       "paused": "▶"
     },
-    "max-length": 32
+    "max-length": 64
   }
 }
