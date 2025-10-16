@@ -11,7 +11,7 @@ install:
 	make clean-local
 
 	cp ./src/config/tmux/tmux.conf ~/.config/tmux/tmux.conf
-	cp -r ./src/config/nvim ~/.config/nvim
+	cp -r ./src/config/nvim ~/.config
 	cp ./src/zshrc ~/.zshrc
 	cp ./src/p10k.zsh ~/.p10k.zsh
 
