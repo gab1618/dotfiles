@@ -8,6 +8,6 @@ return {
   },
   lazy = false,
   keys = {
-    {"<C-n>", "<cmd> Neotree toggle <cr>"}
-  }
+    { "<C-n>", "<cmd> Neotree toggle reveal <cr>" }
+  },
 }
