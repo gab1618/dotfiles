@@ -11,7 +11,7 @@ install:
 
 	mkdir -p ~/.config/tmux
 	cp ./src/config/tmux/tmux.conf ~/.config/tmux/tmux.conf
-	cp -r ./src/config/nvim ~/.config/nvim
+	cp -r ./src/config/nvim ~/.config
 	cp ./src/zshrc ~/.zshrc
 	cp ./src/p10k.zsh ~/.p10k.zsh
 	cp -r ./src/config/sway ~/.config
