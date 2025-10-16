@@ -5,7 +5,7 @@ Feel free to copy them, just keep in mind it won't just work out of the box.
 ## Dependencies
 
 * FiraCode Nerd Font
-* Neovim + NvChad
+* Neovim + Lazy.nvim
 * Kitty
 * zsh + oh-my-zsh + powerlevel10k
 * Tmux + tpm
