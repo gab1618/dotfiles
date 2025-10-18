@@ -45,7 +45,6 @@ opt.mouse = "a"
 opt.number = true
 opt.pumblend = 10
 opt.pumheight = 10
-opt.relativenumber = true
 opt.ruler = false
 opt.scrolloff = 4
 opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
