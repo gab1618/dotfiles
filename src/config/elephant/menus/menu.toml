@@ -15,8 +15,8 @@ actions = { "suspend" = "systemctl suspend" }
 
 [[entries]]
 icon = ""
-text = "Relaunch"
-actions = { "relaunch" = "uwsm stop" }
+text = "Logout"
+actions = { "relaunch" = "hyprctl dispatch exit" }
 
 [[entries]]
 icon = "󰜉"
