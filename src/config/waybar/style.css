@@ -17,7 +17,7 @@ window#waybar {
 #pulseaudio {
   margin: 1px 0px;
   padding: 4px 8px;
-  color: #b4befe;
+  color: #cba6f7;
   background-color: #11111b;
 
   border-style: none;
@@ -96,7 +96,7 @@ window#waybar {
 
 
 #mpris {
-  color: #cba6f7;
+  color: #89dceb;
   font-weight: 700;
   padding: 4px 12px;
   background-color: #11111b;
