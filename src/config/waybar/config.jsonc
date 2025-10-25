@@ -8,10 +8,9 @@
     "hyprland/workspaces",
     "sway/workspaces"
   ],
-  "modules-center": [
-    "mpris"
-  ],
+  "modules-center": [],
   "modules-right": [
+    "mpris",
     "cpu",
     "network",
     "pulseaudio",
