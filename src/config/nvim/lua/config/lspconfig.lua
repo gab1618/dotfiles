@@ -1,4 +1,4 @@
-local servers = { "lua_ls", "html", "cssls", "rust_analyser", "ts_ls", "svelte", "elixirls", "astro", "texlab" }
+local servers = { "lua_ls", "html", "cssls", "rust_analyser", "ts_ls", "svelte", "elixirls", "astro", "texlab", "gopls" }
 vim.lsp.enable(servers)
 
 local capabilities = require('blink.cmp').get_lsp_capabilities()
@@ -14,6 +14,8 @@ vim.lsp.config("astro", { capabilities = capabilities })
 vim.lsp.config("texlab", { capabilities = capabilities })
 
 vim.lsp.config("lua_ls", { capabilities = capabilities })
+
+vim.lsp.config("gopls", { capabilities = capabilities })
 
 vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = "LSP code action" })
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "Format" })
