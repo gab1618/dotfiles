@@ -1,7 +1,7 @@
 FROM archlinux
 
 RUN pacman -Syu --noconfirm && \
-  pacman -S zsh neovim tmux git base-devel eza --noconfirm
+  pacman -S zsh neovim tmux git jujutsu base-devel eza --noconfirm
 
 # For GUI packages: pacman -S sway swaybg waybar kitty grim slurp wl-clipboard hyprland hyprpaper
 
@@ -10,8 +10,10 @@ RUN git config --global user.name "Gabriel C. Brandão" && \
   git config --global user.email "biel.brandao2004@gmail.com" && \
   git config --global core.editor nvim && \
   git config --global rerere.enabled true && \
-  git config --global column.ui auto && \
-  git config --global init.defaultbranch main;
+  git config --global init.defaultbranch main && \
+  jj config set --user ui.editor nvim && \
+  jj config set --user user.name "Gabriel C. Brandão" && \
+  jj config set --user user.email "biel.brandao2004@gmail.com";
 
 RUN chsh -s /bin/zsh
 ENV ZSH=/root/.oh-my-zsh
