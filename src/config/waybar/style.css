@@ -15,25 +15,28 @@ window#waybar {
 #tray,
 #cpu,
 #pulseaudio {
-  margin: 1px 0px;
+  margin: 1px 4px;
   padding: 4px 8px;
   color: #cba6f7;
   background-color: #11111b;
 
   border-style: none;
+  border-radius: 8px;
 }
 #cpu {
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  color: #f9e2af;
+}
+#network {
+  color: #a6e3a1;
 }
 #clock {
+  color: #89dceb;
   margin-right: 6px;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
 }
 
-#network {}
-#pulseaudio {}
+#pulseaudio {
+  color: #94e2d5;
+}
 #battery {}
 
 #battery.warning,
@@ -80,20 +83,19 @@ window#waybar {
 
 #workspaces button:hover {
   transition-duration: 120ms;
-  color: #cba6f7;
+  color: #eba0ac;
 }
 #workspaces button.focused {
-  color: #cba6f7;
+  color: #eba0ac;
   font-weight: 500;
 }
 #workspaces button.active {
-  color: #cba6f7;
+  color: #eba0ac;
   font-weight: 500;
 }
 #workspaces button.urgent {
   color: #fab387;
 }
-
 
 #mpris {
   color: #fab387;
