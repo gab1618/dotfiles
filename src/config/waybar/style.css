@@ -9,57 +9,6 @@ window#waybar {
   border-style: none;
 }
 
-#battery,
-#network,
-#clock,
-#tray,
-#cpu,
-#pulseaudio {
-  margin: 1px 4px;
-  padding: 4px 8px;
-  color: #cba6f7;
-  background-color: #11111b;
-
-  border-style: none;
-  border-radius: 8px;
-}
-#cpu {
-  color: #f9e2af;
-}
-#network {
-  color: #a6e3a1;
-}
-#clock {
-  color: #89dceb;
-  margin-right: 6px;
-}
-
-#pulseaudio {
-  color: #94e2d5;
-}
-#battery {}
-
-#battery.warning,
-#battery.critical,
-#battery.urgent {
-  color: #1d2021;
-}
-
-#tray menu {
-  background-color: #11111b;
-  color: #d8cab8;
-  padding: 4px;
-}
-#tray menu menuitem {
-  margin: 3px;
-  color: #d8cab8;
-  border-style: none;
-}
-#tray menu menuitem:hover {
-  color: #fab387;
-  font-weight: bold;
-}
-
 #workspaces {
   margin-left: 6px;
   margin: 1px 4px;
@@ -83,14 +32,14 @@ window#waybar {
 
 #workspaces button:hover {
   transition-duration: 120ms;
-  color: #eba0ac;
+  color: #f38ba8;
 }
 #workspaces button.focused {
-  color: #eba0ac;
+  color: #f38ba8;
   font-weight: 500;
 }
 #workspaces button.active {
-  color: #eba0ac;
+  color: #f38ba8;
   font-weight: 500;
 }
 #workspaces button.urgent {
@@ -98,7 +47,7 @@ window#waybar {
 }
 
 #mpris {
-  color: #fab387;
+  color: #eba0ac;
   font-weight: 500;
   padding: 4px 8px;
   background-color: #11111b;
@@ -110,3 +59,60 @@ window#waybar {
 #mpris.paused {
   color: #45475a;
 }
+
+#battery,
+#network,
+#clock,
+#tray,
+#cpu,
+#pulseaudio {
+  margin: 1px 4px;
+  padding: 4px 8px;
+  color: #cba6f7;
+  background-color: #11111b;
+
+  border-style: none;
+  border-radius: 8px;
+}
+
+#cpu {
+  color: #fab387;
+}
+
+#network {
+  color: #f9e2af;
+}
+
+#pulseaudio {
+  color: #a6e3a1;
+}
+
+#tray menu {
+  background-color: #11111b;
+  color: #d8cab8;
+  padding: 4px;
+}
+#tray menu menuitem {
+  margin: 3px;
+  color: #d8cab8;
+  border-style: none;
+}
+#tray menu menuitem:hover {
+  color: #fab387;
+  font-weight: bold;
+}
+
+#clock {
+  color: #94e2d5;
+  margin-right: 6px;
+}
+
+#battery {}
+
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+  color: #1d2021;
+}
+
+
