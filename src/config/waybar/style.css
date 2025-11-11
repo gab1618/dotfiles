@@ -32,14 +32,14 @@ window#waybar {
 
 #workspaces button:hover {
   transition-duration: 120ms;
-  color: #f38ba8;
+  color: #cba6f7;
 }
 #workspaces button.focused {
-  color: #f38ba8;
+  color: #cba6f7;
   font-weight: 500;
 }
 #workspaces button.active {
-  color: #f38ba8;
+  color: #cba6f7;
   font-weight: 500;
 }
 #workspaces button.urgent {
