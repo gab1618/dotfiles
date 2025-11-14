@@ -5,8 +5,7 @@
   "margin-bottom": 0,
   "position": "top",
   "modules-left": [
-    "hyprland/workspaces",
-    "sway/workspaces"
+    "hyprland/workspaces"
   ],
   "modules-center": [],
   "modules-right": [
@@ -18,11 +17,6 @@
     "clock"
   ],
   "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": false,
-    "tooltip": false
-  },
-  "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": false,
     "tooltip": false
