@@ -1,7 +1,7 @@
 {
   "layer": "bot",
   "spacing": 0,
-  "height": 0,
+  "height": 32,
   "margin-bottom": 0,
   "position": "top",
   "modules-left": [
