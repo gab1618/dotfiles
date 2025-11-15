@@ -18,7 +18,6 @@ install:
 	cp -r ./src/config/waybar ~/.config
 	cp -r ./src/config/walker ~/.config
 	cp -r ./src/config/elephant ~/.config
-	cp -r ./src/config/eww ~/.config
 	cp -r ./src/config/hypr ~/.config
 
 .PHONY: fetch
@@ -29,7 +28,6 @@ fetch:
 	cp -r ~/.config/nvim ./src/config/
 	cp -r ~/.config/kitty ./src/config/
 	cp -r ~/.config/waybar ./src/config/
-	cp -r ~/.config/eww ./src/config/
 	cp -r ~/.config/hypr ./src/config/
 	cp -r ~/.config/walker ./src/config/
 	cp -r ~/.config/elephant ./src/config/
@@ -44,7 +42,6 @@ clean-local:
 	rm ~/.p10k.zsh
 	rm -rf ~/.config/kitty
 	rm -rf ~/.config/waybar
-	rm -rf ~/.config/eww
 	rm -rf ~/.config/hypr
 	rm -rf ~/.config/walker
 	rm -rf ~/.config/elephant
