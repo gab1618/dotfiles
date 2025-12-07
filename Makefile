@@ -14,11 +14,7 @@ install:
 	cp -r ./src/config/nvim ~/.config
 	cp ./src/zshrc ~/.zshrc
 	cp ./src/p10k.zsh ~/.p10k.zsh
-	cp -r ./src/config/kitty ~/.config
-	cp -r ./src/config/waybar ~/.config
-	cp -r ./src/config/walker ~/.config
-	cp -r ./src/config/elephant ~/.config
-	cp -r ./src/config/hypr ~/.config
+	cp -r ./src/config/alacritty ~/.config
 
 .PHONY: fetch
 fetch:
@@ -26,11 +22,7 @@ fetch:
 	mkdir -p ./src/config/tmux
 	cp ~/.config/tmux/tmux.conf ./src/config/tmux/tmux.conf
 	cp -r ~/.config/nvim ./src/config/
-	cp -r ~/.config/kitty ./src/config/
-	cp -r ~/.config/waybar ./src/config/
-	cp -r ~/.config/hypr ./src/config/
-	cp -r ~/.config/walker ./src/config/
-	cp -r ~/.config/elephant ./src/config/
+	cp -r ~/.config/alacritty ./src/config/
 	cp ~/.zshrc ./src/zshrc
 	cp ~/.p10k.zsh ./src/p10k.zsh
 
@@ -40,11 +32,7 @@ clean-local:
 	rm -rf ~/.config/nvim
 	rm ~/.zshrc
 	rm ~/.p10k.zsh
-	rm -rf ~/.config/kitty
-	rm -rf ~/.config/waybar
-	rm -rf ~/.config/hypr
-	rm -rf ~/.config/walker
-	rm -rf ~/.config/elephant
+	rm -rf ~/.config/alaccrity
 
 .PHONY: clean-repo
 clean-repo:
