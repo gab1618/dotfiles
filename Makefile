@@ -15,6 +15,7 @@ install:
 	cp ./src/zshrc ~/.zshrc
 	cp ./src/p10k.zsh ~/.p10k.zsh
 	cp -r ./src/config/alacritty ~/.config
+	cp -r ./src/config/i3 ~/.config
 
 .PHONY: fetch
 fetch:
@@ -23,6 +24,7 @@ fetch:
 	cp ~/.config/tmux/tmux.conf ./src/config/tmux/tmux.conf
 	cp -r ~/.config/nvim ./src/config/
 	cp -r ~/.config/alacritty ./src/config/
+	cp -r ~/.config/i3 ./src/config/
 	cp ~/.zshrc ./src/zshrc
 	cp ~/.p10k.zsh ./src/p10k.zsh
 
@@ -33,6 +35,7 @@ clean-local:
 	rm ~/.zshrc
 	rm ~/.p10k.zsh
 	rm -rf ~/.config/alaccrity
+	rm -rf ~/.config/i3
 
 .PHONY: clean-repo
 clean-repo:
