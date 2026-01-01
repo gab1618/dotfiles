@@ -27,7 +27,8 @@
   },
   "clock": {
     "format": "󰅐 {:%H:%M}",
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "ags toggle hub",
   },
   "network": {
     "format-wifi": "  {bandwidthDownBits}",
