@@ -1,114 +1,24 @@
-import { readFile } from "ags/file"
 import { Astal } from "ags/gtk4"
 import app from "ags/gtk4/app"
-import { sh, safeAsync, safeSync } from "../utils/cmd"
-import { createPoll } from "ags/time"
+import { safeAsync } from "../utils/cmd"
 
 import Gdk from "gi://Gdk?version=4.0"
-import GLib from "gi://GLib?version=2.0"
 import Gtk from "gi://Gtk?version=4.0"
 import Pango from "gi://Pango?version=1.0"
 import { Notifications } from "../components/Notifications"
-
-const prof = createPoll("user", 60 * 1000, sh("whoami"))
+import { ramPct } from "../providers/ram"
+import { wifiOn, wifiSSID } from "../providers/wifi"
+import { btDev, btOn } from "../providers/bluetooth"
+import { profile } from "../providers/profile"
+import { dndOn } from "../providers/notification"
+import { cpuPct } from "../providers/cpu"
+import { toggleDnd } from "../utils/notification"
+import { readVolNow, setVolumePct, volAdj } from "../utils/volume"
 
 const TOP_GAP = 50
 const RIGHT_GAP = 10
 const PANEL_W = 340
 const PANEL_H = 600
-
-/* ---------------- CPU/RAM ---------------- */
-let prevTotal = 0
-let prevIdle = 0
-
-const cpuPct = createPoll("0%", 2000, () => {
-  try {
-    const line = (readFile("/proc/stat").split("\n")[0] || "").trim()
-    const parts = line.split(/\s+/).slice(1).map(Number)
-    if (parts.length < 4) return "0%"
-
-    const idle = parts[3] + (parts[4] || 0)
-    const total = parts.reduce((a, b) => a + b, 0)
-
-    const totald = total - prevTotal
-    const idled = idle - prevIdle
-    prevTotal = total
-    prevIdle = idle
-
-    if (totald <= 0) return "0%"
-    const usage = Math.max(0, Math.min(1, 1 - idled / totald))
-    return `${Math.round(usage * 100)}%`
-  } catch { return "0%" }
-})
-
-const ramPct = createPoll("0%", 3000, () => {
-  try {
-    const mem = readFile("/proc/meminfo")
-    const total = Number(/MemTotal:\s+(\d+)/.exec(mem)?.[1] || 0)
-    const avail = Number(/MemAvailable:\s+(\d+)/.exec(mem)?.[1] || 0)
-    if (!total) return "0%"
-    const usage = Math.max(0, Math.min(1, 1 - avail / total))
-    return `${Math.round(usage * 100)}%`
-  } catch { return "0%" }
-})
-
-/* ---------------- WiFi/BT/DND ---------------- */
-const wifiOn = createPoll(false, 1500, sh(`nmcli -t -f WIFI g 2>/dev/null | head -n1 || true`), (o) => o.trim() === "enabled")
-const wifiSSID = createPoll("WiFi", 2500, sh(`nmcli -t -f ACTIVE,SSID dev wifi | awk -F: '$1=="yes"{print $2; exit}' || true`), (o) => {
-  const s = o.trim() || "WiFi"
-  return s.length > 9 ? s.slice(0, 9) : s
-})
-
-const btOn = createPoll(false, 1500, sh(`bluetoothctl show 2>/dev/null | grep 'Powered:' | awk '{print $2}' || true`), (o) => o.trim() === "yes")
-const btDev = createPoll(
-  "Off",
-  1500,
-  sh(`
-    if bluetoothctl show 2>/dev/null | grep -q "Powered: yes"; then
-      dev="$(bluetoothctl devices Connected | head -n1 | cut -d' ' -f3-)"
-      if [ -n "$dev" ]; then
-        echo "$dev"
-      else
-        echo "On"
-      fi
-    else
-      echo "Off"
-    fi
-  `),
-  (o) => {
-    const d = o.trim() || "Off"
-    return d.length > 9 ? d.slice(0, 9) : d
-  },
-)
-
-const dndOn = createPoll(false, 1500, sh(`makoctl mode 2>/dev/null || true`), (o) => o.includes("do-not-disturb"))
-async function toggleDnd() { await safeAsync(`makoctl mode -t do-not-disturb`) }
-
-function readVolNow(): number {
-  const o = safeSync(`pactl get-sink-volume @DEFAULT_SINK@ | head -n1 || true`)
-  const m = o.match(/(\d+)%/)
-  const n = Number(m?.[1] || 0)
-  return Number.isFinite(n) ? Math.max(0, Math.min(150, n)) : 0
-}
-
-const volAdj = new Gtk.Adjustment({
-  lower: 0, upper: 150,
-  step_increment: 1, page_increment: 5,
-  value: readVolNow(),
-})
-
-let lastUserVolMs = 0
-
-async function setVolumePct(v: number) {
-  lastUserVolMs = Date.now()
-  await safeAsync(`pactl set-sink-volume @DEFAULT_SINK@ ${Math.round(v)}%`)
-}
-
-// Live sync (updates when you use keyboard keys / other apps)
-GLib.timeout_add(GLib.PRIORITY_DEFAULT, 350, () => {
-  if (Date.now() - lastUserVolMs >= 450) volAdj.set_value(readVolNow())
-  return GLib.SOURCE_CONTINUE
-})
 
 function Chip(props: { icon: string; text: any }) {
   return (
@@ -123,7 +33,7 @@ function Header() {
   return (
     <Gtk.CenterBox class="header" valign={Gtk.Align.CENTER}>
       <Gtk.Box $type="start" spacing={12} valign={Gtk.Align.CENTER}>
-        <Gtk.Label class="name" xalign={0} label={prof} />
+        <Gtk.Label class="name" xalign={0} label={profile} />
       </Gtk.Box>
 
       <Gtk.Box $type="end" spacing={8} valign={Gtk.Align.CENTER}>
