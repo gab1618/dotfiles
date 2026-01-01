@@ -1,6 +1,5 @@
 import { Astal } from "ags/gtk4"
 import app from "ags/gtk4/app"
-import { safeAsync } from "../utils/cmd"
 
 import Gdk from "gi://Gdk?version=4.0"
 import Gtk from "gi://Gtk?version=4.0"
@@ -14,6 +13,8 @@ import { dndOn } from "../providers/notification"
 import { cpuPct } from "../providers/cpu"
 import { toggleDnd } from "../utils/notification"
 import { readVolNow, setVolumePct, volAdj } from "../utils/volume"
+import { launchNMConnectionEditor, toggleWifi } from "../utils/wifi"
+import { launchBlueman, toggleBluetooth } from "../utils/bluetooth"
 
 const TOP_GAP = 50
 const RIGHT_GAP = 10
@@ -51,13 +52,11 @@ function ButtonsAndSlidersCard() {
         <Gtk.Button
           class={wifiOn((on) => (on ? "qs-btn active" : "qs-btn"))}
           hexpand
-          onClicked={async () => {
-            await safeAsync(`nmcli radio wifi ${wifiOn() ? "off" : "on"}`)
-          }}
+          onClicked={toggleWifi}
           $={(btn) => {
             const right = new Gtk.GestureClick()
             right.set_button(3)
-            right.connect("pressed", () => safeAsync(`nm-connection-editor`))
+            right.connect("pressed", launchNMConnectionEditor)
             btn.add_controller(right)
           }}
         >
@@ -70,13 +69,11 @@ function ButtonsAndSlidersCard() {
         <Gtk.Button
           class={btOn((on) => (on ? "qs-btn active" : "qs-btn"))}
           hexpand
-          onClicked={async () => {
-            await safeAsync(`bluetoothctl power ${btOn() ? "off" : "on"}`)
-          }}
+          onClicked={toggleBluetooth}
           $={(btn) => {
             const right = new Gtk.GestureClick()
             right.set_button(3)
-            right.connect("pressed", () => safeAsync(`blueman-manager`))
+            right.connect("pressed", launchBlueman)
             btn.add_controller(right)
           }}
         >
