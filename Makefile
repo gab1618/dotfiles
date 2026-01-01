@@ -22,7 +22,7 @@ install:
 	cp -r ./src/config/quickshell ~/.config
 	cp -r ./src/config/hypr ~/.config
 	cp -r ./src/config/btop ~/.config
-	cp -r ./src/config/ags-widgets ~/.config
+	cp -r ./src/config/ags ~/.config
 
 .PHONY: fetch
 fetch:
@@ -37,7 +37,7 @@ fetch:
 	cp -r ~/.config/elephant ./src/config/
 	cp -r ~/.config/quickshell ./src/config/
 	cp -r ~/.config/btop ./src/config/
-	cp -r ~/.config/ags-widgets/ ./src/config/
+	cp -r ~/.config/ags/ ./src/config/
 	cp ~/.zshrc ./src/zshrc
 	cp ~/.p10k.zsh ./src/p10k.zsh
 

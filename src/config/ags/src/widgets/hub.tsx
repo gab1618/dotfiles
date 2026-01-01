@@ -1,17 +1,14 @@
-#!/usr/bin/env -S ags run
-
 import { readFile } from "ags/file"
 import { Astal } from "ags/gtk4"
 import app from "ags/gtk4/app"
-import { sh, safeAsync, safeSync } from "./src/utils/cmd"
+import { sh, safeAsync, safeSync } from "../utils/cmd"
 import { createPoll } from "ags/time"
-import scss from "./style.scss"
 
 import Gdk from "gi://Gdk?version=4.0"
 import GLib from "gi://GLib?version=2.0"
 import Gtk from "gi://Gtk?version=4.0"
 import Pango from "gi://Pango?version=1.0"
-import { Notifications } from "./src/components/Notifications"
+import { Notifications } from "../components/Notifications"
 
 const prof = createPoll("user", 60 * 1000, sh("whoami"))
 
@@ -210,7 +207,7 @@ function ButtonsAndSlidersCard() {
 /* ---------------- Window ---------------- */
 let hubWin: any = null
 
-function Hub() {
+export function Hub() {
   const A = Astal.WindowAnchor
 
   return (
@@ -260,10 +257,3 @@ function Hub() {
   )
 }
 
-app.start({
-  css: scss,
-  main() {
-    app.hold()
-    return Hub()
-  },
-})
