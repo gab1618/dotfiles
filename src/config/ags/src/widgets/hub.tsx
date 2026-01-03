@@ -4,7 +4,6 @@ import app from "ags/gtk4/app"
 import Gdk from "gi://Gdk?version=4.0"
 import Gtk from "gi://Gtk?version=4.0"
 import Pango from "gi://Pango?version=1.0"
-import { Notifications } from "../components/Notifications"
 import { ramPct } from "../providers/ram"
 import { wifiOn, wifiSSID } from "../providers/wifi"
 import { btDev, btOn } from "../providers/bluetooth"
@@ -16,8 +15,6 @@ import { setVolumePct, volAdj } from "../utils/volume"
 import { launchNMConnectionEditor, toggleWifi } from "../utils/wifi"
 import { launchBlueman, toggleBluetooth } from "../utils/bluetooth"
 
-const TOP_GAP = 50
-const RIGHT_GAP = 10
 const PANEL_W = 340
 const PANEL_H = 600
 
@@ -148,11 +145,9 @@ export function Hub() {
           heightRequest={PANEL_H}
           halign={Gtk.Align.END}
           valign={Gtk.Align.START}
-          css={`margin-top:${TOP_GAP}px; margin-right:${RIGHT_GAP}px;`}
         >
           <Header />
           <ButtonsAndSlidersCard />
-          <Notifications />
         </Gtk.Box>
       </Gtk.Overlay>
     </window>

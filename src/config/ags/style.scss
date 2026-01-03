@@ -7,19 +7,17 @@ window.Hub {
 }
 
 .panel {
-  background: rgba(20,23,25,0.88);
-  border-radius: 24px;
+  background: #11111b;
+  border-radius: 12px;
   padding: 12px;
-  border: 1px solid rgba(255,255,255,0.06);
-  box-shadow: 0 18px 48px rgba(0,0,0,0.45);
+  margin-top: 48px;
+  margin-right: 8px;
 }
 
 .card {
-  background: #1e2326;
-  border-radius: 24px;
+  background: #181825;
+  border-radius: 12px;
   padding: 12px;
-  border: 1px solid rgba(255,255,255,0.05);
-  box-shadow: 0 10px 26px rgba(0,0,0,0.22);
 }
 .card + .card {
   margin-top: 10px;
@@ -32,23 +30,23 @@ window.Hub {
 .name {
   font-size: 18px;
   font-weight: 800;
-  color: #d3c6aa;
+  color: #74c7ec;
 }
 
 .chip {
-  background: #2d353b;
-  border-radius: 999px;
-  padding: 5px 10px;
-  border: 1px solid rgba(255,255,255,0.06);
-}
-.chip-icon {
-  font-size: 12px;
-  color: #a7c080;
-}
-.chip-text {
-  font-size: 11px;
-  font-weight: 800;
-  color: #d3c6aa;
+  border-radius: 4px;
+  padding: 4px 6px;
+  border: 0.3px solid #fab387;
+
+  .chip-icon {
+    font-size: 12px;
+    color: #fab387;
+  }
+  .chip-text {
+    font-size: 11px;
+    font-weight: 800;
+    color: #fab387;
+  }
 }
 
 /* -------- Buttons -------- */
@@ -57,27 +55,22 @@ window.Hub {
 }
 
 .qs-btn {
-  background: #2d353b;
-  color: #d3c6aa;
+  background: #181825;
+  color: #b4befe;
   min-height: 44px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  border: 1px solid #89b4fa;
   padding: 6px 0;
-  transition: background-color 140ms ease, box-shadow 140ms ease, opacity 120ms ease;
-}
-.qs-btn:hover {
-  background: #374145;
-  box-shadow: 0 0 0 2px rgba(167,192,128,0.10) inset;
-}
-.qs-btn:active {
-  opacity: 0.92;
-}
+  transition: background-color 140ms ease, box-shadow 140ms ease;
 
-.qs-btn.active {
-  background: #a7c080;
-  color: #232a2e;
-  border-color: rgba(167,192,128,0.9);
-  box-shadow: 0 0 18px rgba(167,192,128,0.16);
+  &:hover {
+    background: #89b4fa;
+    color: #181825;
+  }
+  &.active {
+    background: #89b4fa;
+    color: #181825;
+  }
 }
 
 .qs-icon {
@@ -92,169 +85,36 @@ window.Hub {
   color: inherit;
 }
 
-/* -------- Sliders (no extra “row outlines”) -------- */
 .sliders-box {
   margin-top: 10px;
-}
-.slider-row {
-  padding: 0;
-  background: transparent;
-  border: none;
-}
-
-.slider-icon {
-  color: #9da9a0;
-  font-size: 14px;
-  min-width: 16px;
-}
-
-scale {
-  min-height: 24px;
-}
-scale trough {
-  background: #2d353b;
-  border-radius: 999px;
-  min-height: 24px;
-  border: 1px solid rgba(255,255,255,0.06);
-}
-scale highlight {
-  background: #a7c080;
-  border-radius: 999px;
-}
-scale slider {
-  background: transparent;
-  min-width: 1px;
-  min-height: 1px;
-}
-
-/* -------- Glance -------- */
-.glance {
-  background: rgba(45,53,59,0.20);
-  border-radius: 16px;
-  padding: 8px 10px;
-  border: 1px solid rgba(255,255,255,0.04);
-  margin-top: 10px;
-}
-.glance-ico {
-  color: #a7c080;
-  font-size: 12px;
-}
-.glance-txt {
-  color: #d3c6aa;
-  font-size: 11px;
-  font-weight: 800;
+  .slider-row {
+    padding: 0;
+    background: transparent;
+    border: none;
+  }
+  .slider-icon {
+    color: #89b4fa;
+    font-size: 14px;
+    min-width: 16px;
+  }
+  scale {
+    min-height: 24px;
+    trough {
+      border-radius: 8px;
+      overflow: hidden;
+      min-height: 24px;
+      border: 1px solid #89b4fa;
+    }
+    highlight {
+      background: #89b4fa;
+      border-radius: 0px
+    }
+    slider {
+      background: transparent;
+      min-width: 1px;
+      min-height: 1px;
+      opacity: 0;
+    }
+  }
 }
 
-/* -------- Notifications -------- */
-.notif-title {
-  font-size: 13px;
-  font-weight: 900;
-  color: #d3c6aa;
-}
-
-.badge {
-  background: #2d353b;
-  border-radius: 999px;
-  padding: 4px 9px;
-  border: 1px solid rgba(255,255,255,0.06);
-}
-.badge-text {
-  font-size: 11px;
-  font-weight: 900;
-  color: #d3c6aa;
-}
-
-.btn-clear {
-  background: rgba(230,126,128,0.10);
-  border-radius: 12px;
-  padding: 6px 12px;
-  border: 1px solid rgba(230,126,128,0.35);
-  transition: background-color 120ms ease, opacity 120ms ease;
-}
-.btn-clear:hover {
-  background: rgba(230,126,128,0.18);
-}
-.btn-clear:active {
-  opacity: 0.92;
-}
-.btn-clear label {
-  color: #e67e80;
-  font-size: 10px;
-  font-weight: 900;
-}
-
-.notif-item {
-  background: #2d353b;
-  border-radius: 12px;
-  padding: 10px;
-  border: 1px solid rgba(255,255,255,0.06);
-  transition: background-color 120ms ease, opacity 160ms ease, margin-left 160ms ease;
-}
-.notif-item:hover {
-  background: #374145;
-}
-.notif-item:active {
-  opacity: 0.92;
-}
-.notif-item.gone {
-  opacity: 0.0;
-  margin-left: -10px;
-}
-
-.notif-ico {
-  min-width: 28px; min-height: 28px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.05);
-  color: #a7c080;
-}
-.notif-ico label {
-  font-size: 14px;
-  line-height: 1;
-  margin-top: 0px;
-}
-
-.notif-app {
-  font-size: 9px;
-  font-weight: 900;
-  letter-spacing: 0.12em;
-  color: rgba(157,169,160,0.85);
-}
-.notif-msg {
-  font-size: 11px;
-  font-weight: 800;
-  color: #d3c6aa;
-}
-
-.empty-text {
-  font-size: 11px;
-  font-style: italic;
-  color: rgba(157,169,160,0.75);
-  padding: 14px 0;
-}
-
-.btn-row > button:nth-child(1) .qs-icon {
-  padding-left: 0;
-  padding-right: 10px;
-}
-
-.btn-row > button:nth-child(2) .qs-icon {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.btn-row > button:nth-child(3) .qs-icon {
-  padding-left: 0;
-  padding-right: 4px;
-}
-
-.btn-row > button:nth-child(4) .qs-icon {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.qs-label {
-  font-size: 8px;
-  font-weight: 400;
-  opacity: 1;
-  color: inherit;
-}
