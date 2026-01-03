@@ -60,4 +60,8 @@ export function parsePlayerMetadata(rawData: string) {
   return metadata
 }
 
+export function trimArtUrlPrefix(val: string) {
+  return val.slice(5)
+}
+
 export const playerMetadata = createPoll(getDefaultPlayerMetadata(), 1000, sh("playerctl metadata"), parsePlayerMetadata)
