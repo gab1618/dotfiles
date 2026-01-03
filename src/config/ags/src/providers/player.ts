@@ -65,3 +65,6 @@ export function trimArtUrlPrefix(val: string) {
 }
 
 export const playerMetadata = createPoll(getDefaultPlayerMetadata(), 1000, sh("playerctl metadata"), parsePlayerMetadata)
+
+export type PlayerStatus = "Paused" | "Playing";
+export const isPlaying = createPoll(false, 1000, sh("playerctl status"), o => o === "Playing")

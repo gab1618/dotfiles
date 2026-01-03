@@ -1,5 +1,6 @@
 import { Gtk } from "ags/gtk4";
-import { playerMetadata, trimArtUrlPrefix } from "../providers/player";
+import { playerMetadata, trimArtUrlPrefix, isPlaying } from "../providers/player";
+import { playerNext, playerPrev, playerToggle } from "../utils/player";
 
 export function Player() {
   return (
@@ -30,6 +31,38 @@ export function Player() {
           class="artist"
           halign={Gtk.Align.START}
         />
+
+        <Gtk.Box
+          class="controls"
+        >
+          <Gtk.Button
+            class="prev"
+            onClicked={playerPrev}
+          >
+            <Gtk.Label
+              label=""
+              class="icon"
+            />
+          </Gtk.Button>
+          <Gtk.Button
+            class="toggle"
+            onClicked={playerToggle}
+          >
+            <Gtk.Label
+              label={isPlaying(playing => playing ? "󰏤" : "") }
+              class="icon"
+            />
+          </Gtk.Button>
+          <Gtk.Button
+            class="next"
+            onClicked={playerNext}
+          >
+            <Gtk.Label
+              label=""
+              class="icon"
+            />
+          </Gtk.Button>
+        </Gtk.Box>
       </Gtk.Box>
     </Gtk.Box>
   )

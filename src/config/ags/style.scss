@@ -135,5 +135,15 @@ window.Hub {
       font-size: 10px;
       font-weight: 600;
     }
+    .controls {
+      .prev, .toggle, .next {
+        background: transparent;
+        padding: 4px;
+
+        .icon {
+          font-size: 14px;
+        }
+      }
+    }
   }
 }
