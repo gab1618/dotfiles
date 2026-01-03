@@ -12,7 +12,7 @@ import { profile } from "../providers/profile"
 import { dndOn } from "../providers/notification"
 import { cpuPct } from "../providers/cpu"
 import { toggleDnd } from "../utils/notification"
-import { readVolNow, setVolumePct, volAdj } from "../utils/volume"
+import { setVolumePct, volAdj } from "../utils/volume"
 import { launchNMConnectionEditor, toggleWifi } from "../utils/wifi"
 import { launchBlueman, toggleBluetooth } from "../utils/bluetooth"
 
@@ -136,11 +136,6 @@ export function Hub() {
           if (keyval === Gdk.KEY_Escape) self.visible = false
         })
         self.add_controller(k)
-
-        self.connect("notify::visible", () => {
-          if (!self.visible) return
-          volAdj.set_value(readVolNow())
-        })
       }}
     >
       <Gtk.Overlay>
