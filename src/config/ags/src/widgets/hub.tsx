@@ -14,6 +14,7 @@ import { toggleDnd } from "../utils/notification"
 import { setVolumePct, volAdj } from "../utils/volume"
 import { launchNMConnectionEditor, toggleWifi } from "../utils/wifi"
 import { launchBlueman, toggleBluetooth } from "../utils/bluetooth"
+import { Player } from "../sections/player"
 
 const PANEL_W = 340
 const PANEL_H = 600
@@ -148,6 +149,7 @@ export function Hub() {
         >
           <Header />
           <ButtonsAndSlidersCard />
+          <Player />
         </Gtk.Box>
       </Gtk.Overlay>
     </window>
