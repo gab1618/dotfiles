@@ -102,7 +102,6 @@ window.Hub {
     min-height: 24px;
     trough {
       border-radius: 8px;
-      overflow: hidden;
       min-height: 24px;
       border: 1px solid #89b4fa;
     }
@@ -119,3 +118,22 @@ window.Hub {
   }
 }
 
+.player {
+  .thumb {
+    border-radius: 12px;
+  }
+  .details {
+    padding-left: 12px;
+
+    .title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #74c7ec;
+    }
+    .artist {
+      color: #45475a;
+      font-size: 10px;
+      font-weight: 600;
+    }
+  }
+}
