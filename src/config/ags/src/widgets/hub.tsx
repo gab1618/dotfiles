@@ -44,7 +44,7 @@ function Header() {
 
 function ButtonsAndSlidersCard() {
   return (
-    <Gtk.Box class="card" orientation={Gtk.Orientation.VERTICAL} spacing={10}>
+    <Gtk.Box class="section" orientation={Gtk.Orientation.VERTICAL} spacing={10}>
       <Gtk.Box class="btn-row" spacing={12} homogeneous>
         <Gtk.Button
           class={wifiOn((on) => (on ? "qs-btn active" : "qs-btn"))}

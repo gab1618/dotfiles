@@ -14,13 +14,14 @@ window.Hub {
   margin-right: 8px;
 }
 
-.card {
+.section {
   background: #181825;
   border-radius: 12px;
   padding: 12px;
-}
-.card + .card {
-  margin-top: 10px;
+
+  & + & {
+    margin-top: 8px;
+  }
 }
 
 .header {
