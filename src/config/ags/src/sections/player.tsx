@@ -3,6 +3,7 @@ import { playerMetadata, trimArtUrlPrefix, isPlaying } from "../providers/player
 import { playerNext, playerPrev, playerToggle } from "../utils/player";
 
 export function Player() {
+  const isPlayingPoll = isPlaying();
   return (
     <Gtk.Box class="section player" orientation={Gtk.Orientation.HORIZONTAL}>
 
@@ -46,10 +47,12 @@ export function Player() {
           </Gtk.Button>
           <Gtk.Button
             class="toggle"
-            onClicked={playerToggle}
+            onClicked={() => {
+              playerToggle()
+            }}
           >
             <Gtk.Label
-              label={isPlaying(playing => playing ? "󰏤" : "") }
+              label={isPlayingPoll(playing => playing ? "󰏤" : "") }
               class="icon"
             />
           </Gtk.Button>
