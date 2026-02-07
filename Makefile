@@ -6,10 +6,10 @@ help:
 
 .PHONY: install
 install:
-	@echo "Installing full distribution..."
-	mkdir -p ~/.config
-
 	mkdir -p ~/.config/tmux
+	@echo "Installing..."
+	make clean-local
+
 	cp ./src/config/tmux/tmux.conf ~/.config/tmux/tmux.conf
 	cp -r ./src/config/nvim ~/.config
 	cp ./src/zshrc ~/.zshrc
@@ -27,12 +27,6 @@ fetch:
 	mkdir -p ./src/config/tmux
 	cp ~/.config/tmux/tmux.conf ./src/config/tmux/tmux.conf
 	cp -r ~/.config/nvim ./src/config/
-	cp -r ~/.config/kitty ./src/config/
-	cp -r ~/.config/waybar ./src/config/
-	cp -r ~/.config/eww ./src/config/
-	cp -r ~/.config/hypr ./src/config/
-	cp -r ~/.config/walker ./src/config/
-	cp -r ~/.config/elephant ./src/config/
 	cp ~/.zshrc ./src/zshrc
 	cp ~/.p10k.zsh ./src/p10k.zsh
 
