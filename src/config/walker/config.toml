@@ -40,14 +40,6 @@ provider = "providerlist"
 prefix = "/"
 provider = "files"
 
-[[providers.prefixes]]
-prefix = "!"
-provider = "todo"
-
-[[providers.prefixes]]
-prefix = "="
-provider = "calc"
-
 [providers.actions]
 dmenu = [
  { action = "select", default = true, bind = "Return" },
