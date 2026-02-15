@@ -67,7 +67,9 @@ child {
 }
 
 .item-box {
+  color: @text;
   padding: 10px;
+  font-weight: 600;
 }
 
 .item-quick-activation {
@@ -78,6 +80,7 @@ child {
 child:hover .item-box,
 child:selected .item-box {
   color: @foreground;
+  font-weight: 700;
 }
 
 .item-text-box {
@@ -87,8 +90,9 @@ child:selected .item-box {
 }
 
 .item-subtext {
+  color: @subtext;
   font-size: 12px;
-  opacity: 0.5;
+  font-weight: 400;
 }
 
 .item-image,
