@@ -17,4 +17,4 @@ Feel free to copy them, just keep in mind it won't just work out of the box.
 
 ## Screenshots
 
-![Desktop](./screenshots/screenshot.png)
+![Desktop](./screenshots/screenshot-2026-02-16-070446.png)
