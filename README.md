@@ -9,7 +9,10 @@ Feel free to copy them, just keep in mind it won't just work out of the box.
 * Kitty
 * zsh + oh-my-zsh + powerlevel10k
 * Tmux + tpm
-* Hyprland + Waybar + Eww + Walker + Elephant
+* Hyprland, Hyprlock, Hypridle, Hyprpaper
+* Waybar
+* Walker + Elephant
+* Quickshell
 * Grim, slurp, wl-clipboard
 
 ## Screenshots
