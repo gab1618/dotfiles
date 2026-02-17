@@ -14,6 +14,7 @@ Feel free to copy them, just keep in mind it won't just work out of the box.
 * Walker + Elephant
 * Quickshell
 * Grim, slurp, wl-clipboard
+* Btop
 
 ## Screenshots
 
