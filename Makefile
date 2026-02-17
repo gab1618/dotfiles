@@ -7,6 +7,7 @@ help:
 .PHONY: install
 install:
 	@echo "Installing full distribution..."
+	make clean-local
 	mkdir -p ~/.config
 
 	mkdir -p ~/.config/tmux
@@ -20,6 +21,7 @@ install:
 	cp -r ./src/config/elephant ~/.config
 	cp -r ./src/config/quickshell ~/.config
 	cp -r ./src/config/hypr ~/.config
+	cp -r ./src/config/btop ~/.config
 
 .PHONY: fetch
 fetch:
@@ -33,6 +35,7 @@ fetch:
 	cp -r ~/.config/walker ./src/config/
 	cp -r ~/.config/elephant ./src/config/
 	cp -r ~/.config/quickshell ./src/config/
+	cp -r ~/.config/btop ./src/config/
 	cp ~/.zshrc ./src/zshrc
 	cp ~/.p10k.zsh ./src/p10k.zsh
 
@@ -48,6 +51,7 @@ clean-local:
 	rm -rf ~/.config/walker
 	rm -rf ~/.config/elephant
 	rm -rf ~/.config/quickshell
+	rm -rf ~/.config/btop
 
 .PHONY: clean-repo
 clean-repo:
