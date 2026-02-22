@@ -3,10 +3,13 @@ import Quickshell.Widgets
 import QtQuick
 import QtQuick.Layouts
 
+import qs.config
+
 PanelWindow {
   id: pokemon
 
   property var imageRadius: 12
+  property var iconSize: 80
   property var pkmns: ["./assets/serperior.png", "./assets/whimsicott.png", "./assets/mismagius.png"]
 
   color: "#00000000"
@@ -28,14 +31,11 @@ PanelWindow {
       model: pkmns
 
       Rectangle {
-        property var iconSize: 80
-        property var bgColor: "#11111b"
         required property string modelData
-
 
         width: iconSize
         height: iconSize
-        color: bgColor
+        color: Theme.colBg
         radius: imageRadius
 
         Image {

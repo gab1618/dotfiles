@@ -7,6 +7,7 @@ import QtQuick.Layouts
 import Quickshell.Services.Pipewire
 import QtQuick.Controls
 
+import qs.config
 import qs.services
 
 PanelWindow {
@@ -14,20 +15,8 @@ PanelWindow {
 
   visible: true
 
-  // Theme
-  property color colBg: "#11111b"
-  property color colFg: "#cad3f5"
-  property color colMuted: "#313244"
-  property color colSky: "#91d7e3"
-  property color colMauve: "#cba6f7"
-  property color colBlue: "#8aadf4"
-  property color colTeal: "#8bd5ca"
-  property color colGreen: "#a6da95"
-
   property string fontFamily: "FiraCode Nerd Font"
   property int fontSize: 14
-
-  // Processes and timers here...
 
   anchors.top: true
   anchors.left: true
@@ -38,11 +27,10 @@ PanelWindow {
   RowLayout {
     anchors.fill: parent
     anchors.margins: 4
-    spacing: 12
+    spacing: 8
 
-    // Workspaces
     Rectangle {
-      color: bar.colBg
+      color: Theme.colBg
       radius: 8
 
       RowLayout {
@@ -61,7 +49,7 @@ PanelWindow {
             property bool isActive: Hyprland.focusedWorkspace?.id === (index + 1)
             text: index + 1
             visible: ws ? true : false
-            color: (isActive || isHovered) ? bar.colMauve : bar.colMuted
+            color: (isActive || isHovered) ? Theme.colMauve : Theme.colMuted
             font {
               family: bar.fontFamily;
               pixelSize: bar.fontSize;
@@ -88,7 +76,7 @@ PanelWindow {
 
     Label {
       text: " " + Math.round(Audio.volume * 100) + "%"
-      color: bar.colGreen
+      color: Theme.colGreen
       topPadding: 4
       bottomPadding: 4
       leftPadding: 8
@@ -111,7 +99,7 @@ PanelWindow {
       }
       background: Rectangle {
         radius: 8
-        color: bar.colBg
+        color: Theme.colBg
       }
     }
 
@@ -122,7 +110,7 @@ PanelWindow {
       bottomPadding: 4
       leftPadding: 8
       rightPadding: 8
-      color: bar.colTeal
+      color: Theme.colTeal
 
       font {
         family: bar.fontFamily;
@@ -137,7 +125,7 @@ PanelWindow {
       }
       background: Rectangle {
         radius: 8
-        color: bar.colBg
+        color: Theme.colBg
       }
     }
   }
