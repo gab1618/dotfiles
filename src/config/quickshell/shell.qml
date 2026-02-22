@@ -7,4 +7,5 @@ Scope {
   // globals
   Pokemon {}
   Menu {}
+  Bar {}
 }
