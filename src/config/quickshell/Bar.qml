@@ -30,9 +30,9 @@ PanelWindow {
 
     Item { Layout.fillWidth: true }
 
-    Tray {}
-
     Mpris {}
+
+    Tray {}
 
     Sound {}
 
