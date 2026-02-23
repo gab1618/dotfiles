@@ -5,7 +5,7 @@ import QtQuick.Controls
 
 import qs.config
 import qs.services
-import qs.components
+import qs.components.bar
 
 PanelWindow {
   id: bar
