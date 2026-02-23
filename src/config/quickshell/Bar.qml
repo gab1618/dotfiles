@@ -9,6 +9,7 @@ import QtQuick.Controls
 
 import qs.config
 import qs.services
+import qs.components
 
 PanelWindow {
   id: bar
@@ -71,6 +72,8 @@ PanelWindow {
     }
 
     Item { Layout.fillWidth: true }
+
+    Mpris {}
 
     // Clock
 

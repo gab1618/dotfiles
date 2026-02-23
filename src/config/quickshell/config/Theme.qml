@@ -13,4 +13,6 @@ Singleton {
     readonly property color colBlue: "#8aadf4"
     readonly property color colTeal: "#8bd5ca"
     readonly property color colGreen: "#a6da95"
+    readonly property color colRed: "#f38ba8"
+    readonly property color colMaroon: "#eba0ac"
 }
