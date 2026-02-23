@@ -6,7 +6,7 @@ help:
 
 .PHONY: install
 install:
-	@echo "Installing full distribution..."
+	@echo "Installing..."
 	make clean-local
 	mkdir -p ~/.config
 
