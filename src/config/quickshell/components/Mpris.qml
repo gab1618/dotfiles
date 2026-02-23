@@ -33,14 +33,14 @@ Rectangle {
         ? player.trackTitle + " - " + player.trackArtist
         : ""
       font {
-        weight: 500;
+        weight: 700;
         pixelSize: bar.fontSize;
       }
     }
   }
 
   implicitWidth: row.implicitWidth + hPadding * 2
-  implicitHeight: row.implicitHeight + vPadding * 2
+  implicitHeight: 28
 
   MouseArea {
     anchors.fill: parent
