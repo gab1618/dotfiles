@@ -16,6 +16,8 @@ Rectangle {
 
   radius: 8
 
+  visible: trayItemsRenderer.count
+
   RowLayout {
     id: row
 
@@ -28,6 +30,7 @@ Rectangle {
     spacing: 12
 
     Repeater {
+      id: trayItemsRenderer
       model: SystemTray.items
 
       Rectangle {
@@ -57,5 +60,4 @@ Rectangle {
   }
   implicitWidth: row.implicitWidth + hPadding * 2
   implicitHeight: 28
-
 }
