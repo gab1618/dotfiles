@@ -29,9 +29,7 @@ Rectangle {
       Layout.maximumWidth: 280
       elide: Text.ElideRight
       color: player.isPlaying ? Theme.colMaroon : Theme.colMuted
-      text: player
-        ? player.trackTitle + " - " + player.trackArtist
-        : ""
+      text: player.trackTitle + " - " + player.trackArtist
       font {
         weight: 700;
         pixelSize: bar.fontSize;
