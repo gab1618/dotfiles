@@ -4,7 +4,6 @@ import Quickshell
 import QtQuick
 
 Singleton {
-    readonly property AppearanceConfig.Rounding rounding: Config.appearance.rounding
     readonly property color colBg: "#11111b"
     readonly property color colFg: "#cad3f5"
     readonly property color colMuted: "#313244"
@@ -15,4 +14,6 @@ Singleton {
     readonly property color colGreen: "#a6da95"
     readonly property color colRed: "#f38ba8"
     readonly property color colMaroon: "#eba0ac"
+    readonly property color colPeach: "#fab387"
+    readonly property color colYellow: "#f9e2af"
 }
