@@ -5,8 +5,10 @@ import qs.config
 import qs.services
 
 Rectangle {
-  implicitHeight: 28
   implicitWidth: soundLabel.implicitWidth
+  anchors.top: parent.top
+  anchors.bottom: parent.bottom
+
   color: Theme.colBg
   radius: 8
 

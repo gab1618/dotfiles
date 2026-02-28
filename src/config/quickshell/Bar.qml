@@ -20,7 +20,7 @@ PanelWindow {
 
   RowLayout {
     anchors.fill: parent
-    anchors.margins: 4
+    anchors.margins: 2
     spacing: 8
 
     Workspaces {}

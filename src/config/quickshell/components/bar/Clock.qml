@@ -5,8 +5,9 @@ import qs.config
 
 Rectangle {
   radius: 8
-  implicitHeight: 28
   implicitWidth: clock.implicitWidth
+  anchors.top: parent.top
+  anchors.bottom: parent.bottom
   color: Theme.colBg
 
   Label {
@@ -27,7 +28,7 @@ Rectangle {
       interval: 1000
       running: true
       repeat: true
-      onTriggered: clock.text = Qt.formatDateTime(new Date(), "󰅐 HH:mm")
+      onTriggered: clock.text = Qt.formatDateTime(new Date(), "  dd ddd 󰅐 HH:mm")
     }
   }
 }

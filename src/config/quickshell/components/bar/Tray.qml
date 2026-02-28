@@ -14,7 +14,11 @@ Rectangle {
   readonly property var hPadding: 12
   readonly property var iconSize: 16
 
+  anchors.top: parent.top
+  anchors.bottom: parent.bottom
+
   radius: 8
+  implicitWidth: row.implicitWidth + hPadding * 2
 
   visible: trayItemsRenderer.count
 
@@ -58,6 +62,4 @@ Rectangle {
       }
     }
   }
-  implicitWidth: row.implicitWidth + hPadding * 2
-  implicitHeight: 28
 }

@@ -9,6 +9,8 @@ import qs.config
 Rectangle {
   color: Theme.colBg
   radius: 8
+  anchors.top: parent.top
+  anchors.bottom: parent.bottom
 
   RowLayout {
     id: row
@@ -44,5 +46,4 @@ Rectangle {
     }
   }
   implicitWidth: row.implicitWidth + 28
-  implicitHeight: 28
 }
