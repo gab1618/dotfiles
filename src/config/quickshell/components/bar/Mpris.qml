@@ -30,7 +30,7 @@ Rectangle {
     anchors.rightMargin: hPadding
 
     Label {
-      Layout.maximumWidth: 280
+      Layout.maximumWidth: 320
       elide: Text.ElideRight
       color: player.isPlaying ? Theme.colMaroon : Theme.colMuted
       text: player.trackTitle + " - " + player.trackArtist
