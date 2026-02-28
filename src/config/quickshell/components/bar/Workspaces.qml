@@ -7,16 +7,18 @@ import QtQuick
 import qs.config
 
 Rectangle {
+  readonly property var hPadding: 14
   color: Theme.colBg
   radius: 8
   anchors.top: parent.top
   anchors.bottom: parent.bottom
+  implicitWidth: row.implicitWidth + hPadding * 2
 
   RowLayout {
     id: row
     anchors.fill: parent
-    anchors.leftMargin: 14
-    anchors.rightMargin: 14
+    anchors.leftMargin: hPadding
+    anchors.rightMargin: hPadding
     spacing: 16
 
     Repeater {
@@ -45,5 +47,4 @@ Rectangle {
       }
     }
   }
-  implicitWidth: row.implicitWidth + 28
 }

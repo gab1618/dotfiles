@@ -17,19 +17,17 @@ Rectangle {
   readonly property list<MprisPlayer> players: Mpris.players.values
   readonly property MprisPlayer player: players[0] ?? null
   readonly property var hPadding: 12
-  readonly property var vPadding: 3
   property var showPlayer: false
 
   visible: player !== null
   radius: 8
+  implicitWidth: row.implicitWidth + hPadding * 2
 
   RowLayout {
     id: row
     anchors.fill: parent
     anchors.leftMargin: hPadding
     anchors.rightMargin: hPadding
-    anchors.topMargin: vPadding
-    anchors.bottomMargin: vPadding
 
     Label {
       Layout.maximumWidth: 280
@@ -43,8 +41,6 @@ Rectangle {
     }
   }
 
-  implicitWidth: row.implicitWidth + hPadding * 2
-  implicitHeight: 28
 
   MouseArea {
     anchors.fill: parent

@@ -16,10 +16,11 @@ Rectangle {
     id: soundLabel
     text: " " + Math.round(Audio.volume * 100) + "%"
     color: Theme.colGreen
-    topPadding: 4
-    bottomPadding: 4
     leftPadding: 8
     rightPadding: 8
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    verticalAlignment: Text.AlignVCenter
 
     font {
       family: bar.fontFamily
@@ -31,9 +32,9 @@ Rectangle {
 
       onWheel: event => {
         if (event.angleDelta.y > 0)
-          Audio.incrementVolume();
+        Audio.incrementVolume();
         else if (event.angleDelta.y < 0)
-          Audio.decrementVolume();
+        Audio.decrementVolume();
       }
     }
   }
