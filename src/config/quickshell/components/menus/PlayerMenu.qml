@@ -21,12 +21,10 @@ PopupWindow {
 
   visible: player != null && show
 
-  readonly property var hPadding: 8
-  readonly property var vPadding: 8
-
-  readonly property var thumbSize: root.height - vPadding * 2
+  readonly property var thumbSize: root.height
 
   Rectangle {
+    id: content
     anchors.fill: parent
     color: Theme.colBg
     radius: 8
@@ -34,10 +32,6 @@ PopupWindow {
     RowLayout {
       spacing: 12
       anchors.fill: parent
-      anchors.leftMargin: hPadding
-      anchors.rightMargin: hPadding
-      anchors.topMargin: vPadding
-      anchors.bottomMargin: vPadding
 
       Rectangle {
         width: root.thumbSize
@@ -46,7 +40,7 @@ PopupWindow {
 
         ClippingWrapperRectangle {
           anchors.fill: parent
-          radius: 6
+          radius: content.radius
 
           Image {
             anchors.fill: parent
@@ -64,10 +58,14 @@ PopupWindow {
         ColumnLayout {
           Label {
             text: player.trackTitle
+
             color: Theme.colMaroon
             Layout.topMargin: 12
             Layout.maximumWidth: 280
+
             elide: Text.ElideRight
+            wrapMode: Text.Wrap
+            maximumLineCount: 2
 
             font {
               weight: 700;
