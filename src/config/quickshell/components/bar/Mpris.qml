@@ -14,6 +14,7 @@ Rectangle {
   readonly property MprisPlayer player: players[0] ?? null
   readonly property var hPadding: 12
   readonly property var vPadding: 3
+  property var showPlayer: false
 
   visible: player !== null
   radius: 8
@@ -47,7 +48,7 @@ Rectangle {
 
     onClicked: {
       const menuPos = root.mapToItem(null, 0, root.height)
-      playerMenu.visible = !playerMenu.visible
+      showPlayer = !showPlayer
       playerMenu.anchor.rect.x = menuPos.x
       playerMenu.anchor.rect.y = menuPos.y + 2
     }
@@ -56,6 +57,7 @@ Rectangle {
   PopupWindow {
     id: playerMenu
     anchor.window: bar
+    visible: player !== null && showPlayer
 
     width: 480
     height: 160
