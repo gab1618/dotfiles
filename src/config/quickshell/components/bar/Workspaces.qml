@@ -33,6 +33,7 @@ Rectangle {
           weight: 600
         }
         MouseArea {
+          cursorShape: Qt.PointingHandCursor
           hoverEnabled: true
           anchors.fill: parent
           onClicked: Hyprland.dispatch("workspace " + (index + 1))
