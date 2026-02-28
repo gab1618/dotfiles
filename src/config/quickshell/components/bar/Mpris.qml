@@ -110,6 +110,8 @@ Rectangle {
               text: player.trackTitle
               color: Theme.colMaroon
               Layout.topMargin: 12
+              Layout.maximumWidth: 280
+              elide: Text.ElideRight
 
               font {
                 weight: 700;
