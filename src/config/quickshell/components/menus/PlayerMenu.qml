@@ -110,7 +110,7 @@ PopupWindow {
             Label {
               text: "󰼨"
               visible: player.canGoPrevious
-              color: Theme.colFg
+              color: Theme.colMauve
               font {
                 pixelSize: 20
                 weight: 700;
@@ -127,7 +127,7 @@ PopupWindow {
             Label {
               text: player.isPlaying ? "󰏤" : ""
               visible: player.canTogglePlaying
-              color: Theme.colFg
+              color: Theme.colMauve
               font {
                 pixelSize: 20
                 weight: 700;
@@ -144,7 +144,7 @@ PopupWindow {
             Label {
               text: "󰼧"
               visible: player.canGoNext
-              color: Theme.colFg
+              color: Theme.colMauve
               font {
                 pixelSize: 20
                 weight: 700;
