@@ -5,6 +5,7 @@ import QtQuick.Layouts
 import QtQuick.Controls
 import Quickshell.Widgets
 import qs.config
+import Quickshell.Hyprland
 
 PopupWindow {
   id: root
@@ -50,6 +51,15 @@ PopupWindow {
           }
         }
 
+        MouseArea {
+          anchors.fill: parent
+          cursorShape: Qt.PointingHandCursor
+
+          onClicked: {
+            Hyprland.dispatch(`focuswindow class:^(${player.desktopEntry})$`)
+            root.show = false
+          }
+        }
       }
       Rectangle {
         Layout.fillWidth: true

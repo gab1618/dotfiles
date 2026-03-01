@@ -16,7 +16,6 @@ Rectangle {
   readonly property list<MprisPlayer> players: Mpris.players.values
   readonly property MprisPlayer player: players[0] ?? null
   readonly property var hPadding: 12
-  property var showPlayer: false
 
   visible: player !== null
   radius: 8
@@ -46,7 +45,7 @@ Rectangle {
 
     onClicked: {
       const menuPos = root.mapToItem(null, 0, root.height)
-      showPlayer = !showPlayer
+      playerMenu.show = !playerMenu.show
       playerMenu.anchor.rect.x = menuPos.x
       playerMenu.anchor.rect.y = menuPos.y + 2
     }
