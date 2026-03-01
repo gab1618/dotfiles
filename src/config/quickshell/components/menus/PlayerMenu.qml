@@ -37,6 +37,7 @@ PopupWindow {
     id: content
     anchors.fill: parent
     color: Theme.base1
+    clip: true
     radius: 8
 
     RowLayout {
@@ -97,28 +98,10 @@ PopupWindow {
           }
           Label {
             text: player.trackArtist
-            color: Theme.base8
+            color: Theme.base6
             font {
-              weight: 500;
+              weight: 600;
               pixelSize: 12;
-            }
-          }
-          Item {
-            id: progressBar
-            Layout.fillWidth: true
-            height: 4
-
-            Rectangle {
-              anchors.fill: parent
-              radius: height / 2
-              color: Theme.base4
-            }
-
-            Rectangle {
-              height: parent.height
-              width: parent.width * progress
-              radius: height / 2
-              color: Theme.rosewater
             }
           }
           RowLayout {
@@ -177,6 +160,29 @@ PopupWindow {
             }
           }
         }
+      }
+    }
+
+    Item {
+      id: progressBar
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      height: 2
+
+      Rectangle {
+        anchors.fill: parent
+        bottomLeftRadius: height / 2
+        bottomRightRadius: height / 2
+        color: Theme.base3
+      }
+
+      Rectangle {
+        height: parent.height
+        width: parent.width * progress
+        bottomLeftRadius: height / 2
+        bottomRightRadius: height / 2
+        color: Theme.peach
       }
     }
   }
