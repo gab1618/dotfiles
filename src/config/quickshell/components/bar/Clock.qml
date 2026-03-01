@@ -10,8 +10,14 @@ Rectangle {
   Layout.fillHeight: true
   color: Theme.base1
 
+  function clockContent() {
+    return Qt.formatDateTime(new Date(), "  dd ddd 󰅐 HH:mm")
+  }
+
   Label {
     id: clock
+
+    text: clockContent()
     anchors.top: parent.top
     anchors.bottom: parent.bottom
 
@@ -29,7 +35,7 @@ Rectangle {
       interval: 1000
       running: true
       repeat: true
-      onTriggered: clock.text = Qt.formatDateTime(new Date(), "  dd ddd 󰅐 HH:mm")
+      onTriggered: clock.text = clockContent()
     }
   }
 }
