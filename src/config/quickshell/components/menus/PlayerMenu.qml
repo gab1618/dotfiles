@@ -82,7 +82,7 @@ PopupWindow {
             text: player.trackTitle
             Layout.fillWidth: true
 
-            color: Theme.peach
+            color: Theme.rosewater
             Layout.topMargin: 12
             Layout.maximumWidth: 280
 
@@ -97,7 +97,7 @@ PopupWindow {
           }
           Label {
             text: player.trackArtist
-            color: Theme.base10
+            color: Theme.base8
             font {
               weight: 500;
               pixelSize: 12;
@@ -127,7 +127,7 @@ PopupWindow {
             Label {
               text: "󰼨"
               visible: player.canGoPrevious
-              color: Theme.yellow
+              color: Theme.peach
               font {
                 pixelSize: 20
                 weight: 700;
@@ -144,7 +144,7 @@ PopupWindow {
             Label {
               text: player.isPlaying ? "󰏤" : ""
               visible: player.canTogglePlaying
-              color: Theme.yellow
+              color: Theme.peach
               font {
                 pixelSize: 20
                 weight: 700;
@@ -161,7 +161,7 @@ PopupWindow {
             Label {
               text: "󰼧"
               visible: player.canGoNext
-              color: Theme.yellow
+              color: Theme.peach
               font {
                 pixelSize: 20
                 weight: 700;

@@ -30,7 +30,7 @@ Rectangle {
     Label {
       Layout.maximumWidth: 320
       elide: Text.ElideRight
-      color: player.isPlaying ? Theme.peach : Theme.base4
+      color: player.isPlaying ? Theme.maroon : Theme.base4
       text: player.trackTitle + " - " + player.trackArtist
       font {
         weight: 700;

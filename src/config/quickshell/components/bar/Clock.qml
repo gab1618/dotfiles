@@ -18,7 +18,7 @@ Rectangle {
     leftPadding: 8
     rightPadding: 8
     verticalAlignment: Text.AlignVCenter
-    color: Theme.teal
+    color: Theme.green
 
     font {
       family: bar.fontFamily;

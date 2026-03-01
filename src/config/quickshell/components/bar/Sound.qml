@@ -15,7 +15,7 @@ Rectangle {
   Label {
     id: soundLabel
     text: " " + Math.round(Audio.volume * 100) + "%"
-    color: Theme.green
+    color: Theme.peach
     leftPadding: 8
     rightPadding: 8
     anchors.top: parent.top
