@@ -45,7 +45,6 @@ PopupWindow {
           bottomLeftRadius: content.radius
 
           Image {
-            anchors.fill: parent
             source: player.trackArtUrl
             fillMode: Image.PreserveAspectCrop
           }
@@ -64,6 +63,7 @@ PopupWindow {
 
           Label {
             text: player.trackTitle
+            Layout.fillWidth: true
 
             color: Theme.colMaroon
             Layout.topMargin: 12

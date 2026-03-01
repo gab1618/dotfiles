@@ -1,13 +1,13 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
 
 import qs.config
 
 Rectangle {
   radius: 8
   implicitWidth: clock.implicitWidth
-  anchors.top: parent.top
-  anchors.bottom: parent.bottom
+  Layout.fillHeight: true
   color: Theme.colBg
 
   Label {

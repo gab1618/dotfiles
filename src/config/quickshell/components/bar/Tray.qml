@@ -14,8 +14,7 @@ Rectangle {
   readonly property var hPadding: 12
   readonly property var iconSize: 16
 
-  anchors.top: parent.top
-  anchors.bottom: parent.bottom
+  Layout.fillHeight: true
 
   radius: 8
   implicitWidth: row.implicitWidth + hPadding * 2

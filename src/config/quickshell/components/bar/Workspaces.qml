@@ -10,8 +10,7 @@ Rectangle {
   readonly property var hPadding: 14
   color: Theme.colBg
   radius: 8
-  anchors.top: parent.top
-  anchors.bottom: parent.bottom
+  Layout.fillHeight: true
   implicitWidth: row.implicitWidth + hPadding * 2
 
   RowLayout {
@@ -28,6 +27,7 @@ Rectangle {
         property bool isHovered: false
         property var ws: Hyprland.workspaces.values.find(w => w.id === index + 1)
         property bool isActive: Hyprland.focusedWorkspace?.id === (index + 1)
+
         text: index + 1
         visible: ws ? true : false
         color: ws.urgent ? Theme.colPeach : (isActive || isHovered) ? Theme.colMauve : Theme.colMuted

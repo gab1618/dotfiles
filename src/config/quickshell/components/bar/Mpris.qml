@@ -11,8 +11,7 @@ Rectangle {
   id: root
   color: Theme.colBg
 
-  anchors.top: parent.top
-  anchors.bottom: parent.bottom
+  Layout.fillHeight: true
 
   readonly property list<MprisPlayer> players: Mpris.players.values
   readonly property MprisPlayer player: players[0] ?? null

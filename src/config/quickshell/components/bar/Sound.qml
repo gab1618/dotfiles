@@ -1,13 +1,13 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
 
 import qs.config
 import qs.services
 
 Rectangle {
   implicitWidth: soundLabel.implicitWidth
-  anchors.top: parent.top
-  anchors.bottom: parent.bottom
+  Layout.fillHeight: true
 
   color: Theme.colBg
   radius: 8
