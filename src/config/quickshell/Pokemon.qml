@@ -44,7 +44,7 @@ PanelWindow {
 
         width: iconSize
         height: iconSize
-        color: Theme.colBg
+        color: Theme.base1
         radius: imageRadius
 
         Image {

@@ -8,7 +8,7 @@ import qs.config
 
 Rectangle {
   readonly property var hPadding: 14
-  color: Theme.colBg
+  color: Theme.base1
   radius: 8
   Layout.fillHeight: true
   implicitWidth: row.implicitWidth + hPadding * 2
@@ -30,7 +30,7 @@ Rectangle {
 
         text: index + 1
         visible: ws ? true : false
-        color: ws.urgent ? Theme.colPeach : (isActive || isHovered) ? Theme.colMauve : Theme.colMuted
+        color: ws.urgent ? Theme.peach : (isActive || isHovered) ? Theme.maroon : Theme.base4
         font {
           family: bar.fontFamily;
           pixelSize: bar.fontSize;

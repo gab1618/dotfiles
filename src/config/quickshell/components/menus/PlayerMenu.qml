@@ -26,10 +26,17 @@ PopupWindow {
 
   readonly property real progress: player.length > 0 ? player.position / player.length : 0
 
+  Timer {
+    running: player.playbackState == MprisPlaybackState.Playing
+    interval: 1000
+    repeat: true
+    onTriggered: player.positionChanged()
+  }
+
   Rectangle {
     id: content
     anchors.fill: parent
-    color: Theme.colBg
+    color: Theme.base1
     radius: 8
 
     RowLayout {
@@ -75,7 +82,7 @@ PopupWindow {
             text: player.trackTitle
             Layout.fillWidth: true
 
-            color: Theme.colMaroon
+            color: Theme.peach
             Layout.topMargin: 12
             Layout.maximumWidth: 280
 
@@ -90,7 +97,7 @@ PopupWindow {
           }
           Label {
             text: player.trackArtist
-            color: Theme.colFg
+            color: Theme.base10
             font {
               weight: 500;
               pixelSize: 12;
@@ -104,14 +111,14 @@ PopupWindow {
             Rectangle {
               anchors.fill: parent
               radius: height / 2
-              color: Theme.colMuted
+              color: Theme.base4
             }
 
             Rectangle {
               height: parent.height
               width: parent.width * progress
               radius: height / 2
-              color: Theme.colMauve
+              color: Theme.rosewater
             }
           }
           RowLayout {
@@ -120,7 +127,7 @@ PopupWindow {
             Label {
               text: "󰼨"
               visible: player.canGoPrevious
-              color: Theme.colMauve
+              color: Theme.yellow
               font {
                 pixelSize: 20
                 weight: 700;
@@ -137,7 +144,7 @@ PopupWindow {
             Label {
               text: player.isPlaying ? "󰏤" : ""
               visible: player.canTogglePlaying
-              color: Theme.colMauve
+              color: Theme.yellow
               font {
                 pixelSize: 20
                 weight: 700;
@@ -154,7 +161,7 @@ PopupWindow {
             Label {
               text: "󰼧"
               visible: player.canGoNext
-              color: Theme.colMauve
+              color: Theme.yellow
               font {
                 pixelSize: 20
                 weight: 700;

@@ -8,7 +8,7 @@ Rectangle {
   radius: 8
   implicitWidth: clock.implicitWidth
   Layout.fillHeight: true
-  color: Theme.colBg
+  color: Theme.base1
 
   Label {
     id: clock
@@ -18,7 +18,7 @@ Rectangle {
     leftPadding: 8
     rightPadding: 8
     verticalAlignment: Text.AlignVCenter
-    color: Theme.colTeal
+    color: Theme.teal
 
     font {
       family: bar.fontFamily;

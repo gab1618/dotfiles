@@ -9,7 +9,7 @@ import QtQuick.Layouts
 
 Rectangle {
   id: root
-  color: Theme.colBg
+  color: Theme.base1
 
   Layout.fillHeight: true
 
@@ -30,7 +30,7 @@ Rectangle {
     Label {
       Layout.maximumWidth: 320
       elide: Text.ElideRight
-      color: player.isPlaying ? Theme.colMaroon : Theme.colMuted
+      color: player.isPlaying ? Theme.peach : Theme.base4
       text: player.trackTitle + " - " + player.trackArtist
       font {
         weight: 700;

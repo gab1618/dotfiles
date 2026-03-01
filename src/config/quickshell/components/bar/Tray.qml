@@ -8,7 +8,7 @@ import qs.config
 
 Rectangle {
   id: root
-  color: Theme.colBg
+  color: Theme.base1
 
   readonly property var vPadding: 4
   readonly property var hPadding: 12

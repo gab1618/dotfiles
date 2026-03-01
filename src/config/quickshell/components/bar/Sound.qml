@@ -9,13 +9,13 @@ Rectangle {
   implicitWidth: soundLabel.implicitWidth
   Layout.fillHeight: true
 
-  color: Theme.colBg
+  color: Theme.base1
   radius: 8
 
   Label {
     id: soundLabel
     text: " " + Math.round(Audio.volume * 100) + "%"
-    color: Theme.colGreen
+    color: Theme.green
     leftPadding: 8
     rightPadding: 8
     anchors.top: parent.top
