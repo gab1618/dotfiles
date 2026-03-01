@@ -23,18 +23,30 @@ PanelWindow {
     anchors.margins: 2
     anchors.leftMargin: 6
     anchors.rightMargin: 6
-    spacing: 8
 
-    Workspaces {}
+    RowLayout {
+      Layout.fillWidth: true
+      Layout.alignment: Qt.AlignLeft
 
-    Item { Layout.fillWidth: true }
+      Workspaces {}
+    }
 
-    Mpris {}
+    RowLayout {
+      Layout.fillWidth: true
+    }
 
-    Tray {}
+    RowLayout {
+      Layout.fillWidth: true
+      Layout.alignment: Qt.AlignRight
+      spacing: 8
 
-    Sound {}
+      Mpris {}
 
-    Clock {}
+      Tray {}
+
+      Sound {}
+
+      Clock {}
+    }
   }
 }
