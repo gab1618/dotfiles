@@ -23,6 +23,8 @@ PopupWindow {
 
   readonly property var thumbSize: root.height
 
+  readonly property real progress: player.length > 0 ? player.position / player.length : 0
+
   Rectangle {
     id: content
     anchors.fill: parent
@@ -30,7 +32,6 @@ PopupWindow {
     radius: 8
 
     RowLayout {
-      spacing: 12
       anchors.fill: parent
 
       Rectangle {
@@ -40,7 +41,8 @@ PopupWindow {
 
         ClippingWrapperRectangle {
           anchors.fill: parent
-          radius: content.radius
+          topLeftRadius: content.radius
+          bottomLeftRadius: content.radius
 
           Image {
             anchors.fill: parent
@@ -56,6 +58,10 @@ PopupWindow {
         color: "#00000000"
 
         ColumnLayout {
+          anchors.left: parent.left
+          anchors.right: parent.right
+          anchors.margins: 8
+
           Label {
             text: player.trackTitle
 
@@ -78,6 +84,24 @@ PopupWindow {
             font {
               weight: 500;
               pixelSize: 12;
+            }
+          }
+          Item {
+            id: progressBar
+            Layout.fillWidth: true
+            height: 4
+
+            Rectangle {
+              anchors.fill: parent
+              radius: height / 2
+              color: Theme.colMuted
+            }
+
+            Rectangle {
+              height: parent.height
+              width: parent.width * progress
+              radius: height / 2
+              color: Theme.colMauve
             }
           }
           RowLayout {
