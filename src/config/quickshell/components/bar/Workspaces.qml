@@ -22,7 +22,7 @@ Rectangle {
     spacing: 16
 
     Repeater {
-      model: 9
+      model: 10
       Text {
         id: wsLabel
         property bool isHovered: false
