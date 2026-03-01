@@ -40,7 +40,7 @@ Rectangle {
           cursorShape: Qt.PointingHandCursor
           hoverEnabled: true
           anchors.fill: parent
-          onClicked: Hyprland.dispatch("workspace " + (index + 1))
+          onClicked: ws.activate()
           onEntered: wsLabel.isHovered = true
           onExited: wsLabel.isHovered = false
         }
