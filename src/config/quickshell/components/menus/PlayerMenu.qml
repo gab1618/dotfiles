@@ -16,8 +16,8 @@ PopupWindow {
   readonly property list<MprisPlayer> players: Mpris.players.values
   readonly property MprisPlayer player: players[0] ?? null
 
-  width: 480
-  height: 160
+  implicitWidth: 480
+  implicitHeight: 160
   color: "#00000000"
 
   visible: player != null && show

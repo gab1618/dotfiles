@@ -30,7 +30,7 @@ Rectangle {
 
         text: index + 1
         visible: ws ? true : false
-        color: ws.urgent ? Theme.peach : (isActive || isHovered) ? Theme.rosewater : Theme.base4
+        color: ws?.urgent ? Theme.peach : (isActive || isHovered) ? Theme.rosewater : Theme.base4
         font {
           family: bar.fontFamily;
           pixelSize: bar.fontSize;
