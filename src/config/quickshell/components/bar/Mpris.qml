@@ -53,6 +53,5 @@ Rectangle {
 
   PlayerMenu {
     id: playerMenu
-    show: showPlayer
   }
 }
