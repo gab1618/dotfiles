@@ -30,7 +30,7 @@ Rectangle {
         property bool isActive: Hyprland.focusedWorkspace?.id === (index + 1)
         text: index + 1
         visible: ws ? true : false
-        color: (isActive || isHovered) ? Theme.colMauve : Theme.colMuted
+        color: ws.urgent ? Theme.colPeach : (isActive || isHovered) ? Theme.colMauve : Theme.colMuted
         font {
           family: bar.fontFamily;
           pixelSize: bar.fontSize;
