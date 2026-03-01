@@ -9,6 +9,8 @@ Rectangle {
   implicitWidth: soundLabel.implicitWidth
   Layout.fillHeight: true
 
+  readonly property real audioDelta: 0.05
+
   color: Theme.base1
   radius: 8
 
@@ -32,9 +34,9 @@ Rectangle {
 
       onWheel: event => {
         if (event.angleDelta.y > 0)
-        Audio.incrementVolume();
+        Audio.incrementVolume(audioDelta);
         else if (event.angleDelta.y < 0)
-        Audio.decrementVolume();
+        Audio.decrementVolume(audioDelta);
       }
     }
   }
