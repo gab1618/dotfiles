@@ -57,7 +57,7 @@ Rectangle {
         }
       }
       Label {
-        text: player.isPlaying ? "󰏤" : ""
+        text: player.isPlaying ? "󰏤" : "󰼛"
         visible: player.canTogglePlaying
         color: Theme.base1
         font {
@@ -97,6 +97,7 @@ Rectangle {
       elide: Text.ElideRight
       color: player.isPlaying ? Theme.maroon : Theme.base4
       text: player.trackTitle + " - " + player.trackArtist
+
       font {
         weight: 700;
         pixelSize: bar.fontSize;
