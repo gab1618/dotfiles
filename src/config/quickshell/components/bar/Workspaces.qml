@@ -8,7 +8,7 @@ import qs.config
 
 Rectangle {
   id: workspaces
-  readonly property var hPadding: 8
+  readonly property var hPadding: 4
   readonly property var vPadding: 4
 
   color: Theme.base1
