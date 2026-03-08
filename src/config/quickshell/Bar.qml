@@ -20,7 +20,7 @@ PanelWindow {
 
   RowLayout {
     anchors.fill: parent
-    anchors.margins: 2
+    anchors.topMargin: 2
     anchors.leftMargin: 6
     anchors.rightMargin: 6
 
