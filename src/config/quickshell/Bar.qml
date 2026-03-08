@@ -15,7 +15,7 @@ PanelWindow {
   anchors.top: true
   anchors.left: true
   anchors.right: true
-  implicitHeight: 36
+  implicitHeight: 32
   color: "#00000000"
 
   RowLayout {
