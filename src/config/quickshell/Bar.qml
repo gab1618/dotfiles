@@ -25,22 +25,24 @@ PanelWindow {
     anchors.rightMargin: 6
 
     RowLayout {
-      Layout.fillWidth: true
-      Layout.alignment: Qt.AlignLeft
+      anchors.left: parent.left
+      anchors.verticalCenter: parent.verticalCenter
 
       Workspaces {}
     }
 
     RowLayout {
-      Layout.fillWidth: true
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.centerIn: parent
+
+      Mpris {}
     }
 
     RowLayout {
-      Layout.fillWidth: true
-      Layout.alignment: Qt.AlignRight
       spacing: 8
 
-      Mpris {}
+      anchors.right: parent.right
+      anchors.verticalCenter: parent.verticalCenter
 
       Tray {}
 
