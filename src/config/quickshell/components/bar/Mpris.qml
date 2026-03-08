@@ -115,10 +115,10 @@ Rectangle {
 
       Behavior on Layout.maximumWidth {
         NumberAnimation {
-          duration: 300
+          duration: 400
 
           easing {
-            type: Easing.InCubic
+            type: Easing.InOutCubic
             amplitude: 2.0;
             period: 1.5
           }
