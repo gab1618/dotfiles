@@ -17,6 +17,8 @@ Rectangle {
   readonly property MprisPlayer player: players[0] ?? null
   readonly property var hPadding: 12
 
+  property var showTracktitle: false
+
   visible: player !== null
   radius: height / 2
   implicitWidth: row.implicitWidth + hPadding * 2
@@ -95,12 +97,18 @@ Rectangle {
 
     Label {
       id: tracktitle
-      visible: false
-      Layout.maximumWidth: 360
+      visible: showTracktitle
+      Layout.maximumWidth: showTracktitle ? 360 : 0
       Layout.fillHeight: true
       elide: Text.ElideRight
       color: player.isPlaying ? Theme.maroon : Theme.base4
       text: player.trackTitle + " - " + player.trackArtist
+
+      Behavior on Layout.maximumWidth {
+        NumberAnimation {
+          duration: 300
+        }
+      }
 
       verticalAlignment: Text.AlignVCenter
 
@@ -141,7 +149,7 @@ Rectangle {
         cursorShape: Qt.PointingHandCursor
 
         onClicked: {
-          tracktitle.visible = !tracktitle.visible
+          showTracktitle = !showTracktitle
         }
       }
     }
