@@ -111,6 +111,7 @@ Rectangle {
       elide: Text.ElideRight
       color: player.isPlaying ? Theme.maroon : Theme.base4
       text: player.trackTitle + " - " + player.trackArtist
+      onTextChanged: forceLayout()
 
       Behavior on Layout.maximumWidth {
         NumberAnimation {
