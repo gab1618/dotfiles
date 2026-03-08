@@ -106,7 +106,6 @@ Rectangle {
 
     Label {
       id: tracktitle
-      visible: showTracktitle
       Layout.maximumWidth: showTracktitle ? 360 : 0
       Layout.fillHeight: true
       elide: Text.ElideRight
@@ -116,6 +115,12 @@ Rectangle {
       Behavior on Layout.maximumWidth {
         NumberAnimation {
           duration: 300
+
+          easing {
+            type: Easing.InCubic
+            amplitude: 2.0;
+            period: 1.5
+          }
         }
       }
 
