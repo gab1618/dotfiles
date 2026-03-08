@@ -16,6 +16,7 @@ Rectangle {
   readonly property list<MprisPlayer> players: Mpris.players.values
   readonly property MprisPlayer player: players[0] ?? null
   readonly property var hPadding: 12
+  readonly property var buttonsPadding: 6
 
   property var showTracktitle: false
 
@@ -25,7 +26,6 @@ Rectangle {
 
   RowLayout {
     id: row
-    spacing: 12
 
     anchors.fill: parent
     anchors.leftMargin: hPadding
@@ -35,6 +35,9 @@ Rectangle {
       text: "󰼨"
       visible: player.canGoPrevious
       color: Theme.base1
+
+      leftPadding: buttonsPadding
+      rightPadding: buttonsPadding
 
       verticalAlignment: Text.AlignVCenter
       Layout.fillHeight: true
@@ -57,6 +60,9 @@ Rectangle {
       visible: player.canTogglePlaying
       color: Theme.base1
 
+      leftPadding: buttonsPadding
+      rightPadding: buttonsPadding
+
       verticalAlignment: Text.AlignVCenter
       Layout.fillHeight: true
 
@@ -77,6 +83,9 @@ Rectangle {
       text: "󰼧"
       visible: player.canGoNext
       color: Theme.base1
+
+      leftPadding: buttonsPadding
+      rightPadding: buttonsPadding
 
       verticalAlignment: Text.AlignVCenter
       Layout.fillHeight: true
@@ -112,8 +121,8 @@ Rectangle {
 
       verticalAlignment: Text.AlignVCenter
 
-      leftPadding: 6
-      rightPadding: 6
+      leftPadding: buttonsPadding
+      rightPadding: buttonsPadding
 
       font {
         weight: 700;
@@ -137,6 +146,9 @@ Rectangle {
     Label {
       text: ""
       color: Theme.base1
+
+      leftPadding: buttonsPadding
+      rightPadding: buttonsPadding
 
       font {
         pixelSize: 20
