@@ -15,7 +15,7 @@ PanelWindow {
   anchors.top: true
   anchors.left: true
   anchors.right: true
-  implicitHeight: 32
+  implicitHeight: 36
   color: "#00000000"
 
   RowLayout {
@@ -26,14 +26,16 @@ PanelWindow {
 
     RowLayout {
       anchors.left: parent.left
-      anchors.verticalCenter: parent.verticalCenter
+      anchors.top: parent.top
+      anchors.bottom: parent.bottom
 
       Workspaces {}
     }
 
     RowLayout {
-      anchors.verticalCenter: parent.verticalCenter
       anchors.centerIn: parent
+      anchors.top: parent.top
+      anchors.bottom: parent.bottom
 
       Mpris {}
     }
@@ -42,7 +44,8 @@ PanelWindow {
       spacing: 8
 
       anchors.right: parent.right
-      anchors.verticalCenter: parent.verticalCenter
+      anchors.top: parent.top
+      anchors.bottom: parent.bottom
 
       Tray {}
 

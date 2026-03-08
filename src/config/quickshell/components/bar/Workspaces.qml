@@ -9,6 +9,7 @@ import qs.config
 Rectangle {
   id: workspaces
   readonly property var hPadding: 8
+  readonly property var vPadding: 4
 
   color: Theme.base1
   radius: height / 2
@@ -38,6 +39,11 @@ Rectangle {
 
         leftPadding: wsLabel.height / 2
         rightPadding: wsLabel.height / 2
+
+        Layout.fillHeight: parent
+        Layout.topMargin: vPadding
+        Layout.bottomMargin: vPadding
+        verticalAlignment: Text.AlignVCenter
 
         font {
           family: bar.fontFamily;
