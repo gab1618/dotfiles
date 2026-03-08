@@ -7,9 +7,12 @@ import QtQuick
 import qs.config
 
 Rectangle {
-  readonly property var hPadding: 14
+  id: workspaces
+  readonly property var hPadding: 8
+
   color: Theme.base1
-  radius: 8
+  radius: height / 2
+
   Layout.fillHeight: true
   implicitWidth: row.implicitWidth + hPadding * 2
 
@@ -18,19 +21,24 @@ Rectangle {
     anchors.fill: parent
     anchors.leftMargin: hPadding
     anchors.rightMargin: hPadding
-    spacing: 16
+    spacing: 8
 
     Repeater {
       model: 10
-      Text {
+      Label {
         id: wsLabel
+
         property bool isHovered: false
         property var ws: Hyprland.workspaces.values.find(w => w.id === index + 1)
         property bool isActive: Hyprland.focusedWorkspace?.id === (index + 1)
 
         text: index + 1
         visible: ws ? true : false
-        color: ws?.urgent ? Theme.peach : (isActive || isHovered) ? Theme.rosewater : Theme.base4
+        color: ws?.urgent ? Theme.peach : Theme.base4;
+
+        leftPadding: wsLabel.height / 2
+        rightPadding: wsLabel.height / 2
+
         font {
           family: bar.fontFamily;
           pixelSize: bar.fontSize;
@@ -43,6 +51,13 @@ Rectangle {
           onClicked: ws.activate()
           onEntered: wsLabel.isHovered = true
           onExited: wsLabel.isHovered = false
+        }
+
+        background: Rectangle {
+          color: (isActive || isHovered) ? Theme.mauve : Theme.base1
+          radius: height / 2
+          Layout.fillHeight: true
+          Layout.fillWidth: true
         }
       }
     }

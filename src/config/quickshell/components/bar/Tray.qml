@@ -16,7 +16,7 @@ Rectangle {
 
   Layout.fillHeight: true
 
-  radius: 8
+  radius: height / 2
   implicitWidth: row.implicitWidth + hPadding * 2
 
   visible: trayItemsRenderer.count

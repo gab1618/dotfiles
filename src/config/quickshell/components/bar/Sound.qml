@@ -6,20 +6,22 @@ import qs.config
 import qs.services
 
 Rectangle {
+  readonly property var hPadding: 12
+
   implicitWidth: soundLabel.implicitWidth
   Layout.fillHeight: true
 
   readonly property real audioDelta: 0.05
 
   color: Theme.base1
-  radius: 8
+  radius: height / 2
 
   Label {
     id: soundLabel
     text: " " + Math.round(Audio.volume * 100) + "%"
     color: Theme.peach
-    leftPadding: 8
-    rightPadding: 8
+    leftPadding: hPadding
+    rightPadding: hPadding
     anchors.top: parent.top
     anchors.bottom: parent.bottom
     verticalAlignment: Text.AlignVCenter

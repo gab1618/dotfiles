@@ -5,10 +5,14 @@ import QtQuick.Layouts
 import qs.config
 
 Rectangle {
-  radius: 8
+  readonly property var hPadding: 16
+
   implicitWidth: clock.implicitWidth
   Layout.fillHeight: true
+
   color: Theme.base1
+
+  radius: height / 2
 
   function clockContent() {
     return Qt.formatDateTime(new Date(), "  dd ddd 󰅐 HH:mm")
@@ -21,8 +25,8 @@ Rectangle {
     anchors.top: parent.top
     anchors.bottom: parent.bottom
 
-    leftPadding: 8
-    rightPadding: 8
+    leftPadding: hPadding
+    rightPadding: hPadding
     verticalAlignment: Text.AlignVCenter
     color: Theme.green
 

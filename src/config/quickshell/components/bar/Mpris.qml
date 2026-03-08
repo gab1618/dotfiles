@@ -18,7 +18,7 @@ Rectangle {
   readonly property var hPadding: 12
 
   visible: player !== null
-  radius: 8
+  radius: height / 2
   implicitWidth: row.implicitWidth + hPadding * 2
 
   RowLayout {
