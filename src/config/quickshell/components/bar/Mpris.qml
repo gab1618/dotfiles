@@ -18,7 +18,7 @@ Rectangle {
   readonly property var hPadding: 12
   readonly property var buttonsPadding: 6
 
-  property var showTracktitle: false
+  property var showTracktitle: true
 
   visible: player !== null
   radius: height / 2
