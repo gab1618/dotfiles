@@ -54,4 +54,6 @@ PanelWindow {
       Clock {}
     }
   }
+
+  WallpaperPicker {}
 }
